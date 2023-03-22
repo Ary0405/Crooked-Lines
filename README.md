@@ -10,10 +10,6 @@ Open up [http://localhost:3000](http://localhost:3000), and you should be ready 
 
 It is suggested to use VS Code for this project. 
 
-The compiled CSS files will reside in the same directory as the SCSS files. To avoid confusion, I made a workspace setting for vscode that hides the compiled CSS files within VS Code. So while importing the stylesheets, you'll have to import the file with the extension .css.
-
-If you are using some other IDE, please look for a way to hide the compiled CSS files so you won't have any confusion.
-
 ## Commit naming conventions
 
 <details>
