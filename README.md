@@ -1,31 +1,108 @@
-# good-react-app
+# Crooked Lines - Official Repository
 
-create-react-app without the bs, with some candy
+## Hosting
 
-## 🤔why?
+```sh
+npm run start # or yarn dev
+```
+   
+Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
 
-create-react-app had always been a go-to tool for me to spin up a react project, but i used to always find myself deleting all the unnesesarry files like the `reportWebVitals.js` and `setupTests.js` and not to mention, the assets for that pretty spinner, css and so much more :(
+It is suggested to use VS Code for this project. 
 
-so, i thought why not make this boilerplate public and free for use?
+The compiled CSS files will reside in the same directory as the SCSS files. To avoid confusion, I made a workspace setting for vscode that hides the compiled CSS files within VS Code. So while importing the stylesheets, you'll have to import the file with the extension .css.
 
-## what's in it for you?
+If you are using some other IDE, please look for a way to hide the compiled CSS files so you won't have any confusion.
 
-• you don't need to delete the above mentioned files <br />
-• css reset classes are already setup and no unnesasarry gibbersih for you to handle
+## Commit naming conventions
 
-## usage 
+<details>
+<summary>Read more</summary>
 
-1. Clone this project
-2. run `npm i` or `npm install`
-3. run `npm start`
-4. voila! that's it, go ahead and create the best project you can
+For now, we'll use just these:
 
-## 😠this sucks?
+- `fix:` - fixes a bug
+- `feat:` - new feature
+- `chore:` - other changes and cleanups
 
-have any bright ideas to make this template better? go for it, fork this project and submit a PR
+Example:
 
-## let's talk
+- `fix: fixed navigation bar`
+- `feat: added new sign in feature`
+- `chore: Removed all comments and print statements`
 
- [LinkedIn](https://www.linkedin.com/in/prabhav-pandey/)
+If theres a specific file thats changed or a specific sub category of the project has changes, you can specify it like so:
+
+- `fix(NavBar): fixed overflowing image in nav bar`
+- `feat(SignIn): Added user verification before sign In`
+
+These are just good practices and it'll be easy to revert back if some new merge is breaking the project.
+
+</details>
 
 
+## Pull requests
+
+<details>
+<summary>Read more</summary>
+
+Each contributing member should make a separate branch for completing their tasks.
+You can follow these commands to do so:
+
+- `git checkout -b <branch name>`
+- `git add .`
+- `git commit -m "<Meaningful message following the convention>"`
+- `git push origin <branch name>`
+
+Then in the github repo, you can create a new pull request under pull requests tab.
+
+To keep your branch up-to-date with the master branch, you can use the following commands:
+
+- `git merge main`
+- `git push`
+
+<em>Note: Make sure there are no changes in your branch before merging. If there are any, you'll lose the progress.</em>
+
+</details>
+
+
+
+## New page
+
+<details>
+<summary>Read more</summary>
+
+This one's quite tricky. I've setup `demo.js` and `demo.css` in project.
+
+When you want to make a new page, you can create a new file in the appropriate directory and copy the contents of `demo.js` and `demo.css` into it.
+
+Make sure to:
+
+- Change path of stylesheet on the js file.
+- Change the function name(Doesn't matter but just for consistency)
+- Change the class name.
+
+For a clean project structure, We'll be adding stylesheets to directories same as js files inside `styles/routes/` directory.
+
+</details>
+
+
+
+## New Component
+
+<details>
+<summary>Read more</summary>
+Components won't have much difference compared to React components.
+
+Just create a folder followed by a `.js` file and a `.css` file with the same name(The function should also be named same as the folder name).
+
+One additional step is to import the `.css` file in the `styles/root/components.css` directory.
+
+For example:
+```css
+@import "../../Components/MockNavigator/MockNavigator.css";
+```
+
+<em>Note: Don't name two components with same name. Since all components are styled from same file, we don't want overlaps of style. That'll mess everything up.</em>
+
+</details>
