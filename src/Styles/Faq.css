@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,300&display=swap');
+@font-face {
+    font-family: Satoshi;
+    src: url('../Fonts/Satoshi-Bold.otf');
+}
+
+.faq_main_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.faq_heading_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq_image {
+    width: 42px;
+}
+
+.faq_heading_section_text {
+    font-size: 19px;
+}
+
+.faq_question {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 49.5072px;
+    line-height: 144.1%;
+    /* or 71px */
+    text-align: center;
+}
+
+.accordion-title {
+    display: flex;
+    width: 712px;
+    height: 77px;
+    align-items: center;
+    justify-content: space-between;
+    background: #F7F9FC;
+    border-radius: 11px;
+    font-family: Satoshi;
+    font-size: 20px;
+}
+
+.accordian-title-heading {
+    padding-left: 30px;
+}
+
+.accordian-title-button {
+    padding-right: 30px;
+    width: 50px;
+}
+
+.accordion-content {
+    display: flex;
+    width: 712px;
+    height: 77px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 11px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.accordion-item {
+    margin: 20px;
+}
+
+@media (min-width:240px) and (max-width: 768px) {
+    .faq_image {
+        width: 20px;
+    }
+    .faq_heading_section_text {
+        font-size: 9px;
+    }
+    .faq_question {
+        font-size: 19px;
+    }
+    .accordion-title {
+        width: 300px;
+        font-size: 10px;
+        height: 40px;
+    }
+    .accordian-title-button {
+        padding-right: 40px;
+        width: 20px;
+    }
+    .accordion-content {
+        width: 300px;
+        font-size: 8px;
+    }
+}
