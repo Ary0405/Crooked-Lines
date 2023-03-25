@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { auth, provider } from '../firebase'
 import { signInWithPopup } from 'firebase/auth'
 import OtpInput from 'otp-input-react';
-import Home from './home';
+import Home from './Home';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css'
 import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";

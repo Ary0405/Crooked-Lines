@@ -1,0 +1,64 @@
+@font-face {
+    font-family: Satoshi_Bold;
+    src: url('../Fonts/Satoshi-Bold.otf');
+}
+
+@font-face {
+    font-family: Satoshi_Medium;
+    src: url('../Fonts/Satoshi-Medium.otf');
+}
+
+.heading {
+    padding: 0 20px;
+}
+
+.navbar_main_container {
+    display: flex;
+    color: white;
+    background-color: black;
+    font-family: Satoshi_bold;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    position: fixed;
+    z-index: 1000;
+    width: 98%;
+}
+
+.navbar_container {
+    display: flex;
+    /* width: 50%; */
+    justify-content: space-between;
+}
+
+.navbar_options {
+    display: flex;
+    padding: 0 90px;
+    align-items: center;
+
+}
+
+.navbar_options>p {
+    padding: 0 20px;
+}
+
+.login {
+    background-color: white;
+    color: black;
+    padding: 8px 20px;
+    width: 115px;
+    height: 42px;
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 36.9311px;
+    margin: 10px 20px;
+}
+
+@media (min-width:240px) and (max-width: 768px) {
+    .navbar_main_container {
+        display: none;
+    }
+}
