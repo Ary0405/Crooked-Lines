@@ -1,11 +1,14 @@
 import './App.css';
-import Sign_in from './Pages/sign_in';
+import Contact_us from './Pages/Contact_us';
+import Faq from './Pages/Faq';
 
 
 function App() {
   return (
     <div className="App">
-      <Sign_in />
+      <Contact_us />
+      <Faq />
+
     </div>
   );
 }
