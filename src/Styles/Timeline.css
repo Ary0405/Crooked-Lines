@@ -2,7 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,300&display=swap');
 
 /* Desktop */
-
+.timeline_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .main_bg {
     background-color: white;
     display: flex;
@@ -17,8 +21,6 @@
 .timeline_image {
     top: 12px;
     padding: 5px 5px;
-    left: 120px;
-    position: absolute;
     width: 465.6px; 
     height: auto;
     z-index: 100;
@@ -28,8 +30,6 @@
 }
 
 .heading_timeline{
-    margin-left: 620px;
-    top: 22px;
     font-family: 'Raleway', sans-serif;
     font-size: 22px; 
     font-style: normal;
@@ -40,11 +40,10 @@
 }
 
 .timeline{ 
-    margin-right: 250px;
     color: #0202FC;
     text-underline-position: under;
     font-family: 'Fraunces', serif;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-decoration: underline;
     font-size: 22px;
     font-weight: 800;
@@ -54,7 +53,6 @@
 
 .smallbox{
     margin-top: 10px;
-    margin-left: 620px;
     margin-bottom: 0px;;
     text-align: left;
     font-family: 'Raleway', sans-serif;
@@ -64,6 +62,7 @@
     display: inline-block;
     z-index: 100;
 }
+
 .smallbox2{
     margin-top: 10px;
     margin-left: 80px;
@@ -105,4 +104,32 @@
 .flex-container {
     margin: 5px;
     min-height: 2px;	
-    display: flex; }
+    display: flex; 
+}
+
+@media (min-width:240px) and (max-width: 768px) {
+    .timeline_main {
+        flex-direction: column;
+    }
+    .timeline_image {
+        width: 300px;
+        height: auto;
+        margin-top: 30px;
+    }
+    .smallbox {
+        font-size: 10px;
+    }
+    .smallbox2 {
+        font-size: 10px;
+    }
+    .smalltext {
+        font-size: 7px;
+    }
+    .sarrow {
+        width: 15px;
+        height: auto;
+    }
+    .smallbox2 {
+        margin-left: 30px;
+    }
+}
