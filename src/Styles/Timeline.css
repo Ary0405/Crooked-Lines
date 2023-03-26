@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,300&display=swap');
+
+/* Desktop */
+
+.main_bg {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 70px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline_image {
+    top: 12px;
+    padding: 5px 5px;
+    left: 120px;
+    position: absolute;
+    width: 465.6px; 
+    height: auto;
+    z-index: 100;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px 10px #E8C6E1 , 0px 9px 200px 10px #E8C6E1;
+}
+
+.heading_timeline{
+    margin-left: 620px;
+    top: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px; 
+    font-style: normal;
+    font-weight: 800;
+    color: black;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.timeline{ 
+    margin-right: 250px;
+    color: #0202FC;
+    text-underline-position: under;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 22px;
+    font-weight: 800;
+    white-space: nowrap;
+    display:inline;
+}
+
+.smallbox{
+    margin-top: 10px;
+    margin-left: 620px;
+    margin-bottom: 0px;;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px; 
+    font-weight: 800;
+    color: black;
+    display: inline-block;
+    z-index: 100;
+}
+.smallbox2{
+    margin-top: 10px;
+    margin-left: 80px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px; 
+    font-weight: 800;
+    color: black;
+    display: inline;
+}
+
+.date{
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px; 
+    font-weight: 800;
+    color: black;
+}
+
+.sarrow{
+    margin-top:5px;
+    margin-left:5px;
+    bottom: 200px;
+    width: 22px;
+    height: auto;
+    display: inline;
+    z-index: 100;
+    margin-right: 10px;
+}
+
+.smalltext{
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    z-index: 100;
+    text-align: left;
+    display: inline-block;
+}
+
+.flex-container {
+    margin: 5px;
+    min-height: 2px;	
+    display: flex; }

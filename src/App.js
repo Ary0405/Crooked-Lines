@@ -5,6 +5,7 @@ import Description from './Pages/Description';
 import Faq from './Pages/Faq';
 import Home from './Pages/Home';
 import Sign_in from './Pages/Sign_in';
+import Timeline from './Pages/Timeline';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Home />
       <Description />
+      <Timeline />
       <Contact_us />
       <Faq />
     </div>
