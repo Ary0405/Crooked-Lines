@@ -6,6 +6,8 @@ import Faq from './Pages/Faq';
 import Footer from './Pages/Footer';
 import Home from './Pages/Home';
 import Sign_in from './Pages/Sign_in';
+import Timeline from './Pages/Timeline';
+import Eligible from './Pages/Eligible';
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
       <Navbar />
       <Home />
       <Description />
+      <Timeline />
       <Contact_us />
       <Faq />
       <Footer/>
