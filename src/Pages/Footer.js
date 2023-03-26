@@ -17,7 +17,7 @@ function Footer() {
                 <div id='logo' className='info'>
                     <div className='footer-title'>
                         <img src={logo} className='logo'></img>
-                        <p>Lorem Epsum</p>
+                        <p className='footer-heading'>Crooked Lines</p>
                     </div>
                     <div>
                         <p className='footer-content footer-title p-tag'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -52,7 +52,7 @@ function Footer() {
                             <p className='footer-content p-tag'>mangcoding123@gmail.com</p>
                         </div>
                         <div className='sub-contact footer-content'>
-                            <img className='pic' src={location}></img>
+                            <img className='location' src={location}></img>
                             <p className='footer-content p-tag'>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
                         </div>
                     </div>
