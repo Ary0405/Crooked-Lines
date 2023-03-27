@@ -15,6 +15,7 @@ function App() {
       <Navbar />
       <Home />
       <Description />
+      <Eligible />
       <Timeline />
       <Contact_us />
       <Faq />
