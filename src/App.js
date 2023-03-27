@@ -7,7 +7,6 @@ import Footer from './Pages/Footer';
 import Home from './Pages/Home';
 import Sign_in from './Pages/Sign_in';
 import Timeline from './Pages/Timeline';
-import Eligible from './Pages/Eligible';
 
 
 function App() {

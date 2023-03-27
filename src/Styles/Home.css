@@ -86,3 +86,18 @@
         margin-bottom: 40px;
     }
 }
+
+@media (min-width:769px) and (max-width : 1190px) {
+    .home_image {
+        width: 670px;
+        height: auto;
+    }
+
+    .home_header {
+        font-size: 45px;
+    }
+
+    .home_content {
+        font-size: 17px;
+    }
+}

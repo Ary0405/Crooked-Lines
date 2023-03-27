@@ -5,7 +5,7 @@ import arrow from '../Assets/arrow.png'
 
 function Timeline() {
     return (
-        <div className='timeline_main'>
+        <div id='timeline_main' className='timeline_main'>
                 <img className='timeline_image' src={background} />
             <div className='main_bg'>
                 <p><span className='heading_timeline'>have a look at the </span><span className='timeline'>Timeline</span>

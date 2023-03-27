@@ -84,3 +84,49 @@
         padding: 10px;
     }
 }
+
+@media (min-width:769px) and (max-width : 1190px) {
+    .description_image {
+        width: 450px;
+        height: auto;
+    }
+    .description_question {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        text-align: left;
+        color: #000000;
+    }
+    .description_content {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        color: #000000;
+    }
+}
+
+@media (min-width:1191px) and (max-width : 1440px) {
+    .description_image {
+        width: 500px;
+        height: auto;
+    }
+    .description_question {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        text-align: left;
+        color: #000000;
+    }
+    .description_content {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left;
+        color: #000000;
+    }
+}

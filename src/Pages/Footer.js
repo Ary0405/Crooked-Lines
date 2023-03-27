@@ -17,7 +17,7 @@ function Footer() {
                 <div id='logo' className='info'>
                     <div className='footer-title'>
                         <img src={logo} className='logo'></img>
-                        <p className='footer-heading'>Crooked Lines</p>
+                        <p className='footer-heading-title'>Crooked Lines</p>
                     </div>
                     <div>
                         <p className='footer-content footer-title p-tag'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

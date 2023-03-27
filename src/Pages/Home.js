@@ -4,7 +4,7 @@ import Home_image from '../Assets/home_image.png'
 import Home_circle_two from '../Assets/home_circle_two.png'
 function Home() {
     return (
-        <div className='home_main_container'>
+        <div id='home_main_container' className='home_main_container'>
             <img className='home_circle' src={Home_circle_two}/>
             <div className='home_container_one'>
                 <p className='home_header'>Think <span className='beyond'>Beyond</span> the<br />Limits at<br />Lorem Epsime</p>

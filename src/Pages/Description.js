@@ -4,7 +4,7 @@ import Home_image_two from '../Assets/home_image_two.png'
 
 function Description() {
     return (
-        <div className='description_main_container'>
+        <div id='description_main_container' className='description_main_container'>
             <div className='image_container'>
                 <img className='description_image' src={Home_image_two} alt='home_image' />
             </div>

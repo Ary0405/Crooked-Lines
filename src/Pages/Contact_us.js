@@ -7,7 +7,7 @@ import Faq from './Faq'
 function Contact_us() {
     return (
         <>
-            <div className='main_container'>
+            <div id='main_container' className='main_container'>
                 <img className='bg_1' src={background} />
                 <img className='bg_2' src={background_two} />
                 <p className='contact_us_heading'><span className='questions'>Got questions?</span> We would love to answer<br /> to make this contest <span className='smoother'>smoother</span></p>
