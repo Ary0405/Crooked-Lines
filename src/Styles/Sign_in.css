@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap');
+
+@font-face {
+    font-family: Disturbia;
+    src: url('../Fonts/disturbia.ttf');
+}
+
+@font-face {
+    font-family: SF-UI;
+    src: url('../Fonts/SF-UI.ttf');
+}
+
+.signin_main_container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(228.01deg, #D87F91 13.36%, #0202FC 85.45%);
+    border: 1px solid #AFAFAF;
+    box-shadow: 6px 7px 17px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 503px;
+    height: 700px;
+    padding-top: 30px;
+}
+
+.signin_heading {
+    font-family: Disturbia;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55.6364px;
+    color: #FFFFFF;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.signin_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.content_heading {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.content_description {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+}
+
+.google_main_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google_container {
+    width: 356.69px;
+    height: 47.44px;
+    display: flex;
+    background-color: white;
+    font-family: SF-UI;
+    align-items: center;
+    border: 0.942308px solid #FFFFFF;
+    border-radius: 13px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.google_image {
+    width: 25.44px;
+    height: 25.44px;
+    margin-right: 30px;
+}
+
+.separator {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: white;
+    margin: 8px 30px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14.7295px;
+    margin-bottom: 30px;
+}
+
+.phone_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+.separator:before,
+.separator:after {
+    content: "";
+    flex-grow: 1;
+    background: white;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px 8px;
+}
+
+.continue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.continue_button {
+    padding: 16.6685px 121.888px;
+    gap: 10.42px;
+
+    width: 345.78px;
+    height: 55.34px;
+
+    background: #FFFFFF;
+    border-radius: 13.5432px;
+    border: 0;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18.4992px;
+}

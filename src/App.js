@@ -1,24 +1,23 @@
 import './App.css';
-import Navbar from './Components/Navbar';
-import Contact_us from './Pages/Contact_us';
-import Description from './Pages/Description';
-import Faq from './Pages/Faq';
-import Footer from './Pages/Footer';
-import Home from './Pages/Home';
-import Sign_in from './Pages/Sign_in';
-import Timeline from './Pages/Timeline';
 
+import Sign_in from './Pages/Sign_in';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Main from './Pages/Main';
+import { AnimatePresence } from "framer-motion";
+import Otp from './Pages/Otp';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Home />
-      <Description />
-      <Timeline />
-      <Contact_us />
-      <Faq />
-      <Footer/>
+      <AnimatePresence mode='wait'>
+        <BrowserRouter>
+          <Routes>
+            <Route exact path='/' element={<Main />} />
+            <Route exact path='/otp' element={<Otp />} />
+            <Route exact path='/signin' element={<Sign_in />} />
+          </Routes>
+        </BrowserRouter>
+      </AnimatePresence>
     </div>
   );
 }
