@@ -1,10 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { UserAuth } from "../Context/AuthContext";
 import "../Styles/Navbar.css";
 
 function Navbar() {
-  const user = useSelector((state) => state.user);
+  const userA = useSelector((state) => state.user);
+  const { user, logout } = UserAuth();
   const phoneNmber = useSelector((state) => state.phone);
   const handleClick = (scrollToId) => {
     // setActiveNavLinkId(navLinkId);
@@ -15,23 +17,28 @@ function Navbar() {
       <p className="navbar_heading">Crooked Lines</p>
       <div className="navbar_container">
         <div style={{ cursor: "pointer" }} className="navbar_options">
-          <p onClick={() => handleClick("home_main_container")}>Home</p>
-          <p onClick={() => handleClick("description_main_container")}>About</p>
-          <p>Eligibility</p>
-          <p onClick={() => handleClick("timeline_main")}>Timeline</p>
-          <p>Submission</p>
-          <p onClick={() => handleClick("main_container")}>Contact</p>
-          <p onClick={() => handleClick("faq_main_container")}>FAQ</p>
+          <p style={{ textDecoration: "none", cursor: "pointer" }} onClick={() => handleClick("home_main_container")}>Home</p>
+          <p style={{ textDecoration: "none", cursor: "pointer" }} onClick={() => handleClick("description_main_container")}>About</p>
+          <p style={{ textDecoration: "none", cursor: "pointer" }} onClick={() => handleClick("eligible_bg")}>Eligibility</p>
+          <p style={{ textDecoration: "none", cursor: "pointer" }} onClick={() => handleClick("timeline_main")}>Timeline</p>
+          <p style={{ textDecoration: "none", cursor: "pointer" }} onClick={() => handleClick("main_container")}>Contact</p>
+          <p style={{ textDecoration: "none", cursor: "pointer" }} onClick={() => handleClick("faq_main_container")}>FAQ</p>
+          <p style={{ textDecoration: "none", cursor: "pointer" }} onClick={() => logout()}>LogOut</p>
         </div>
-        {(user || phoneNmber) ? (
-          <p className="login">Apply</p>
+        {user || phoneNmber ? (
+          <Link
+            style={{ textDecoration: "none", cursor: "pointer" }}
+            to="submission"
+          >
+            <p style={{ textDecoration: "none", cursor: "pointer" }} className="login">Apply</p>
+          </Link>
         ) : (
           <Link
             style={{ textDecoration: "none", cursor: "pointer" }}
             to="signin"
           >
-            <p className="login">Login</p>
-          </Link>   
+            <p style={{ textDecoration: "none", cursor: "pointer" }} className="login">Login</p>
+          </Link>
         )}
       </div>
     </div>
