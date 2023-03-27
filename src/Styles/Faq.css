@@ -6,6 +6,10 @@
     src: url('../Fonts/Satoshi-Bold.otf');
 }
 
+p{
+    max-width: none;
+}
+
 .faq_main_container {
     display: flex;
     flex-direction: column;

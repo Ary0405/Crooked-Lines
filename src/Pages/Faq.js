@@ -28,7 +28,7 @@ function Faq() {
         }
     ];
     return (
-        <div className='faq_main_container'>
+        <div id='faq_main_container' className='faq_main_container'>
             <div className='faq_heading_section'>
                 <img className='faq_image' src={faq} />
                 <p className='faq_heading_section_text'>What do you want to know?</p>
