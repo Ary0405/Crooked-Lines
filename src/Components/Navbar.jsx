@@ -2,13 +2,17 @@ import { useState } from 'react'
 import { useSelector } from "react-redux";
 import  Hamburger from '../Assets/hamburg.png'
 import { Link } from "react-router-dom";
-import '../Styles/Navbar.css'
+import { UserAuth } from "../Context/AuthContext";
+import "../Styles/Navbar.css";
 
-export default function Navbar(){
-    const user = useSelector((state) => state.user);
-    const phoneNmber = useSelector((state) => state.phone);
-  
-
+function Navbar() {
+  const userA = useSelector((state) => state.user);
+  const { user, logout } = UserAuth();
+  const phoneNmber = useSelector((state) => state.phone);
+  const handleClick = (scrollToId) => {
+    // setActiveNavLinkId(navLinkId);
+    document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth" });
+  };
     const [showNavbar, setShowNavbar] = useState(false)
 
     const handleShowNavbar = () => {

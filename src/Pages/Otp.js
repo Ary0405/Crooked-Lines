@@ -8,9 +8,6 @@ import OtpInput from 'otp-input-react';
 import { useNavigate } from "react-router-dom";
 import {
     getFirestore,
-    collection,
-    getDocs,
-    getDoc,
     setDoc,
     doc,
 } from "firebase/firestore";
@@ -29,13 +26,12 @@ function Otp() {
             toast.success('OTP verified');
             let document = {
                 "phone": res.user['phoneNumber'],
-                "submission": false,
+                "submission": 0,
             }
             await setDoc(doc(db, "users", res.user['phoneNumber']), document);
             dispatch(actionCreators.setPhoneNumbers(res.user['phoneNumber']));
             console.log("User registered")
             navigate('/');
-            // localStorage.setItem('user', 'hello&gmail.com');
         })
     }
     return (
