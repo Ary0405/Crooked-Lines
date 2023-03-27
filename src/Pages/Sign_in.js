@@ -13,7 +13,6 @@ import {
 } from "firebase/firestore";
 import '../Styles/Sign_in.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { actionCreators } from '../State';
 import { useNavigate } from "react-router-dom";
 const db = getFirestore();
@@ -33,7 +32,7 @@ function Sign_in() {
             let document = {
                 "email": data.user.email,
                 "name": data.user.displayName,
-                "submission": false,
+                "submission": 0,
             }
             await setDoc(doc(db, "users", data.user.email), document);
             dispatch(actionCreators.loginUser(true))
@@ -78,31 +77,6 @@ function Sign_in() {
 
 
     return (
-        // <div className='signin_main_container'>
-        //     <p className='signin_heading'>CROOKED LINES</p>
-        //     <div className='signin_content'>
-        //         <p className='content_heading'>Login</p>
-        //         <p className='content_description'>Continue with Google or Login through OTP</p>
-        //     </div>
-        //     <div className='google_container'>
-        //         <img className='google_image' src={Google_logo} alt='google_logo' />
-        //         <p className='google_text'>Sign Up with Google</p>
-        //     </div>
-        //     <div>
-        //         <div class="separator">or</div>
-        //     </div>
-        //     {/* <input className='phone_input' type={'number'} /> */}
-        //     <PhoneInput containerStyle={{ "alignItems": "flex-start", "alignSelf": "flex-start", "justifyContent": "center", "display": "flex" }} buttonStyle={{ "alignSelf": "center", "justifyContent": "center", "alignItems": "center" }} country={"in"} value={phone} onChange={setPhone} />
-        //     <button className='continue_button' onClick={onSignup}>Continue</button>
-        //     {/* {value ? <Home /> :
-        //         <button onClick={handleClick}>Sign in with Google</button>}
-        //     <Toaster toastOptions={{ duration: 4000 }} />
-        //     <div id='recaptcha-container'></div>
-        //     <PhoneInput country={"in"} value={phone} onChange={setPhone} />
-        //     <button onClick={onSignup}>Send Code Via SMS</button>
-        //     <OtpInput value={otp} onChange={setOtp} OTPLength={6} otpType="number" disabled={false} autofocus></OtpInput>
-        //     <button onClick={onOTPVerify}>Verify</button> */}
-        // </div>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <div className='signin_main_container'>
                 <p className='signin_heading'>CROOKED LINES</p>
