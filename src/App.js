@@ -9,15 +9,6 @@ import Otp from './Pages/Otp';
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-      <Navbar />
-      <Home />
-      <Description />
-      <Eligible />
-      <Timeline />
-      <Contact_us />
-      <Faq />
-=======
       <AnimatePresence mode='wait'>
         <BrowserRouter>
           <Routes>
@@ -27,7 +18,6 @@ function App() {
           </Routes>
         </BrowserRouter>
       </AnimatePresence>
->>>>>>> main
     </div>
   );
 }

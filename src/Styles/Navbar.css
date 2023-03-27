@@ -13,7 +13,7 @@
     src: url('../Fonts/disturbia.ttf');
 }
 
-.heading {
+.navbar_heading {
     font-family: Disturbia;
     padding: 0 20px;
     font-weight: 400;

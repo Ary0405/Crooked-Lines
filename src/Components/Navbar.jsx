@@ -12,7 +12,7 @@ function Navbar() {
   };
   return (
     <div className="navbar_main_container">
-      <p className="heading">Crooked Lines</p>
+      <p className="navbar_heading">Crooked Lines</p>
       <div className="navbar_container">
         <div style={{ cursor: "pointer" }} className="navbar_options">
           <p onClick={() => handleClick("home_main_container")}>Home</p>

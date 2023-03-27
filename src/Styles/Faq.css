@@ -41,7 +41,9 @@ p{
     /* or 71px */
     text-align: center;
 }
-
+.faq_sections_questions {
+    margin-bottom: 30px;
+}
 .accordion-title {
     display: flex;
     width: 712px;
