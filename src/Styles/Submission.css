@@ -119,8 +119,9 @@
 }
 
 .submission_image {
-    margin-top: 90px;
-    height: 90vh;
+    display: grid;
+    place-items: center;
+    height: 100vh;
     overflow: hidden;
 }
 

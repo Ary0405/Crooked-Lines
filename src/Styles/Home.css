@@ -15,7 +15,7 @@
     justify-content: space-evenly;
     padding-left: 60px;
     padding-right: 60px;
-    padding-top: 140px;
+    padding-top: 50px;
     padding-bottom: 100px;
     align-items: center;
     position: relative;
@@ -61,7 +61,7 @@
         text-align: center;
         padding-left: 30px;
         padding-right: 30px;
-        padding-top: 78px;
+        padding-top: 50px;
         padding-bottom: 50px;
     }
 
