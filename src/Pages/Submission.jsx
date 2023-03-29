@@ -31,14 +31,13 @@ function Submission() {
   const [submission, setSubmission] = React.useState("");
   const navigate = useNavigate();
   const { user } = UserAuth();
-  console.log(user);
   useEffect(() => {
     if (user.email) {
       setEmail(user.email);
       setEmailField(true);
     }
     if (user.phoneNumber) {
-      setEmail(user.phoneNumber);
+      setNumber(user.phoneNumber);
       setPhoneField(true);
     }
     document.getElementById("file_input").addEventListener("change", (e) => {
@@ -53,17 +52,17 @@ function Submission() {
       });
     getDocs(userRef).then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        if(doc.id == email || doc.id == number) {
+        if (doc.id == email || doc.id == number) {
           const data = doc.data();
-          console.log(data);
-          if(data.submission > 0) {
-            navigate('/submission-complete')
-          } 
+          if (data.submission > 0) {
+            navigate("/submission-complete");
+          }
         }
       });
     });
   });
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    let urls = [];
     if (
       name === "" ||
       email === "" ||
@@ -72,55 +71,89 @@ function Submission() {
       school === "" ||
       address === ""
     ) {
-      // if (name === "") {
-      //   alert("Please fill name");
-      // } else if (email === "") {
-      //   alert("Please fill email");
-      // } else if (dob === "") {
-      //   alert("Please fill date of birth");
-      // } else if (number === "") {
-      //   alert("Please fill phone number");
-      // } else if (school === "") {
-      //   alert("Please fill school name");
-      // } else if (address === "") {
-      //   alert("Please fill address");
-      // }
       alert("Please fill all the fields");
     } else {
       console.log(dob);
       if (!aadhar || !submission) {
         alert("Please upload files");
       } else {
-        // const aadharRef = ref(storage, `/aadhar/${aadhar.name}`);
-        // const submissionRef = ref(storage, `/submission/${submission.name}`);
-        // const uploadAadharTask = uploadBytesResumable(aadharRef, aadhar);
-        // const uploadSubmissionTask = uploadBytesResumable(
-        //   submissionRef,
-        //   submission
-        // );
-        // uploadAadharTask.on(
-        //   "state_changed",
-        //   (snapshot) => {
-        //     const percent = Math.round(
-        //       (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-        //     );
-        //     setPercent(percent);
-        //   },
-        //   (err) => console.log(err),
-        //   () => {
-        //     getDownloadURL(uploadAadharTask.snapshot.ref).then((url) => {
-        //       console.log(url);
-        //     });
-        //   }
-        // );
+        const aadharRef = ref(storage, `/aadhar/${aadhar.name}`);
+        const submissionRef = ref(storage, `/submission/${submission.name}`);
+        const uploadAadharTask = uploadBytesResumable(aadharRef, aadhar);
+        const uploadSubmissionTask = uploadBytesResumable(
+          submissionRef,
+          submission
+        );
+        let aadharUrl;
+        let userRef;
+        if (emailField) {
+          userRef = doc(db, "users", user.email);
+        } else if (phoneField) {
+          userRef = doc(db, "users", user.phoneNumber);
+        }
+        uploadAadharTask.on(
+          "state_changed",
+          (snapshot) => {
+            const percent = Math.round(
+              (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+            );
+            setPercent(percent);
+          },
+          (err) => console.log(err),
+          async () => {
+            await getDownloadURL(uploadAadharTask.snapshot.ref).then(
+              async (url) => {
+                aadharUrl = url;
+                let document = {
+                  email: email,
+                  name: name,
+                  dob: dob,
+                  number: number,
+                  school: school,
+                  address: address,
+                  aadhar_url: url,
+                  submission: 1,
+                };
+                await updateDoc(userRef, document);
+                urls.push(url);
+                console.log(url);
+              }
+            );
+          }
+        );
+        let submissionUrl;
+        uploadSubmissionTask.on(
+          "state_changed",
+          (snapshot) => {
+            const percent = Math.round(
+              (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+            );
+            setPercent(percent);
+          },
+          (err) => console.log(err),
+          async () => {
+            await getDownloadURL(uploadSubmissionTask.snapshot.ref).then(
+              async (url) => {
+                let document = {
+                  submission_url: url,
+                };
+                await updateDoc(userRef, document);
+                console.log(url);
+              }
+            );
+          }
+        );
+        Promise.all(urls).then((downloadUrls) => {
+          console.log(downloadUrls);
+        });
         console.log(name);
-        console.log(email);
-        console.log(dob);
-        console.log(number);
-        console.log(school);
-        console.log(address);
-        console.log(aadhar);
-        console.log(submission);
+        // console.log(email);
+        // console.log(dob);
+        // console.log(number);
+        // console.log(school);
+        // console.log(address);
+        // console.log(aadhar);
+        // console.log(submission);
       }
       alert("Form submitted successfully");
       // navigate("/submission-complete");
