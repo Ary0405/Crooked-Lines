@@ -13,9 +13,9 @@
     background-color: rgba(239, 238, 255, 1);
     display: flex;
     justify-content: space-evenly;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 50px;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-top: 100px;
     padding-bottom: 100px;
     align-items: center;
     position: relative;
@@ -23,19 +23,20 @@
 
 .home_header {
     font-family: 'Poppins', sans-serif;
-    font-size: 61px;
+    font-size: 50px;
     margin: 0;
     z-index: 100;
+    line-height: 1;
 }
 
 .home_image {
-    width: 794.69px;
-    height: 406.87px;
+    width: 600px;
+    height: auto;
 }
 
 .home_content {
     font-family: 'Raleway', sans-serif;
-    font-size: 19px;
+    font-size: 16px;
     margin-bottom: 30px;
     z-index: 100;
 }
@@ -88,16 +89,33 @@
 }
 
 @media (min-width:769px) and (max-width : 1190px) {
-    .home_image {
-        width: 670px;
-        height: auto;
+    .home_main_container {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .home_header {
-        font-size: 45px;
+        font-size: 70px;
     }
 
     .home_content {
         font-size: 17px;
+    }
+
+    .home_circle {
+        display: none;
+    }
+
+    .home_image {
+        width: 400px;
+        height: auto;
+    }
+
+    .apply_button {
+        margin-bottom: 40px;
     }
 }

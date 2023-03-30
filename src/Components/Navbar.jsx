@@ -28,7 +28,7 @@ function Navbar() {
           <img className="hamburger" src={Hamburger}></img>
         </div>
         <div className={`nav-elements  ${showNavbar && "active"}`}>
-          <ul>
+          <ul className="list_nav">
             <li>
               <p style={{"cursor" : "pointer"}} onClick={() => handleClick("home_main_container")}>Home</p>
             </li>
@@ -38,13 +38,10 @@ function Navbar() {
               </p>
             </li>
             <li>
-              <p style={{"cursor" : "pointer"}}>Eligibility</p>
+              <p style={{"cursor" : "pointer"}} onClick={() => handleClick("eligible_bg")}>Eligibility</p>
             </li>
             <li>
               <p style={{"cursor" : "pointer"}} onClick={() => handleClick("timeline_main")}>Timeline</p>
-            </li>
-            <li>
-              <p>Submission</p>
             </li>
             <li>
               <p style={{"cursor" : "pointer"}} onClick={() => handleClick("main_container")}>Contact</p>
