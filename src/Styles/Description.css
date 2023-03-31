@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .description_main_container {
+    position: relative;
     display: flex;
     background-color: rgba(239, 238, 255, 1);
     align-items: center;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
+    padding-left: 130px;
+    /* padding-right: 130px; */
+}
+
+.description_image_circle {
+    width: 192px;
+    position: absolute;
+    right: 0;
 }
 
 .description_image {
@@ -21,8 +30,8 @@
 
 .description_container {
     background-color: white;
-    border-radius: 100px 0 0 100px;
-    padding: 30px 60px 30px 60px;
+    border-radius: 100px 0 0 0px;
+    padding: 30px 140px 10px 60px;
 }
 
 .description_question {
@@ -44,16 +53,21 @@
 }
 
 @media (min-width:240px) and (max-width: 768px) {
+    .description_image_circle {
+        display: none;
+    }
     .description_main_container {
         display: flex;
         flex-direction: column-reverse;
         background-color: rgba(239, 238, 255, 1);
         align-items: center;
+        padding-left: 0px;
     }
 
     .description_image {
         width: 305.76px;
         height: 159.87px;
+        margin-right: 0px;
     }
 
     .description_question {
@@ -86,10 +100,23 @@
 }
 
 @media (min-width:769px) and (max-width : 1190px) {
-    .description_image {
-        width: 450px;
-        height: auto;
+    .description_image_circle {
+        display: none;
     }
+    .description_main_container {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: rgba(239, 238, 255, 1);
+        align-items: center;
+    }
+
+    .description_image {
+        width: 405.76px;
+        height: auto;
+        margin-right: 80px;
+        margin-bottom: 20px;
+    }
+
     .description_question {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
@@ -98,13 +125,25 @@
         text-align: left;
         color: #000000;
     }
+    
     .description_content {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 15px;
+        font-size: 12px;
         text-align: left;
         color: #000000;
+        padding-right: 100px;
+    }
+
+    .description_container{
+        padding: 30px;
+        border-radius: 0px;
+        background-color: rgba(239, 238, 255, 1);
+    }
+
+    .image_container {
+        padding: 10px;
     }
 }
 
