@@ -2,44 +2,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,300&display=swap');
 /* Desktop */
 
-.eligible_bg{
+.eligible_bg {
     background-color: white;
     display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-bottom: 100px;
-    margin-top: 60px;
-    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.prizes{
+.prizes_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.prizes {
     width: 215.52px;
     height: auto;
-    margin-top: 20px;
-    margin-left: 150px;
     z-index: 100;
     border-radius: 40px;
     box-shadow: 0px 10px 20px #D0A7DD, 0px 10px 20px #ECA2C3;
+    margin-top: 40px;
+    margin-right: 60px;
 }
+
 .box {
     background-color: #EFEEFF;
-    border: none;  
+    border: none;
+    margin-top: 40px;
     border-radius: 20px;
     padding-top: 35px;
-    top: 15px;
-    right: 150px;
-    position: absolute;
     width: 700.46px;
-    height: 406.67px;
-    display: inline;
-    text-align: left;
+    height: 350px;
     text-align: center;
     box-shadow: 20px 30px 40px #D0A7DD, 0px 10px 30px #ECA2C3;
-}   
+}
 
-.heading{
+.heading {
     font-family: 'Raleway', sans-serif;
-    font-size: 24px; 
+    font-size: 24px;
     font-weight: 800;
     padding: 0%;
     white-space: nowrap;
@@ -49,7 +49,7 @@
 .linetwo {
     font-family: 'Fraunces', serif;
     font-style: normal;
-    color:#D87F91;
+    color: #D87F91;
     /*color: linear-gradient(#BC6F9E, #D87F91);*/
     font-size: 22px;
     font-weight: 800;
@@ -57,19 +57,19 @@
     text-align: center;
 }
 
-ul{
+ul {
     margin-right: 10px;
     margin-left: 0px;
-    list-style-image:  url('../Assets/Star.png');
+    list-style-image: url('../Assets/Star.png');
     display: inline-block;
 }
 
-.ul_class1{
+.ul_class1 {
     top: 100px;
     margin-left: -10px;
 }
 
-.list{
+.list {
     margin-left: 10px;
     margin-bottom: 8px;
     text-align: left;
@@ -77,4 +77,82 @@ ul{
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
     z-index: 100;
+}
+
+@media (max-width: 768px) {
+    .eligible_bg {
+        flex-direction: column;
+    }
+
+    .prizes_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .prizes {
+        width: 130px;
+        margin: 0;
+        margin: 20px;
+    }
+
+    .box {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        margin: 20px;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ul_class1 {
+        padding: 0;
+        margin-left: 10px;
+    }
+}
+
+@media(min-width : 769px) and (max-width : 1190px) {
+    .eligible_bg {
+        flex-direction: column;
+    }
+
+    .prizes_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .prizes {
+        width: 130px;
+        margin: 0;
+        margin: 20px;
+    }
+
+    .box {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        margin: 20px;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ul_class1 {
+        padding: 0;
+        margin-left: 10px;
+    }
 }

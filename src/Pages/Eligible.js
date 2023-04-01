@@ -7,12 +7,14 @@ import prize3 from '../Assets/prize3.png'
 function Eligible() {
   return (
     <div id='eligible_bg' className='eligible_bg'>
-      <img className='prizes' src={prize1} />
-      <img className='prizes' src={prize2} />
-      <img className='prizes' src={prize3} />
+      <div className='prizes_container'>
+        <img className='prizes' src={prize1} />
+        <img className='prizes' src={prize2} />
+        <img className='prizes' src={prize3} />
+      </div>
       <div className='box'>
         <p className='heading'>ENGLISH WRITING COMPETITION<span className='linetwo'> Rules & Eligibility?</span></p>
-        <ul>
+        <ul className='ul_class1'>
           <li className='list'>Entries must be between 1000-2000 words.</li>
           <li className='list'>Contestants must be 16-18 years old and in<br />class 10-12.</li>
           <li className='list'>All entries must be original and in English to<br /> avoid disqualification.</li>
@@ -24,7 +26,8 @@ function Eligible() {
           <li className='list'>Plagiarized entries will be disqualified.</li>
           <li className='list'>The decision of the jury is final and cannot be<br /> challenged.</li>
         </ul>
-      </div></div>
+      </div>
+    </div>
   )
 }
 
