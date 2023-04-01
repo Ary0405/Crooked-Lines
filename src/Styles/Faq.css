@@ -29,14 +29,15 @@ p{
 }
 
 .faq_heading_section_text {
-    font-size: 19px;
+    font-size: 15px;
+    margin-left: 5px;
 }
 
 .faq_question {
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 700;
-    font-size: 49.5072px;
+    font-size: 40px;
     line-height: 144.1%;
     /* or 71px */
     text-align: center;
@@ -46,14 +47,14 @@ p{
 }
 .accordion-title {
     display: flex;
-    width: 712px;
-    height: 77px;
+    width: 550px;
+    height: 70px;
     align-items: center;
     justify-content: space-between;
     background: #F7F9FC;
     border-radius: 11px;
     font-family: Satoshi;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .accordian-title-heading {
@@ -67,7 +68,7 @@ p{
 
 .accordion-content {
     display: flex;
-    width: 712px;
+    width: 550px;
     height: 77px;
     align-items: center;
     justify-content: space-between;

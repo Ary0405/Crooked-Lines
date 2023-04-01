@@ -208,4 +208,7 @@
     margin-right: unset;
     margin-top: 22px;
   }
+  .list_nav {
+    align-items: flex-start;
+  }
 }

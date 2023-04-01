@@ -133,3 +133,36 @@
         margin-left: 30px;
     }
 }
+
+@media (min-width : 769px) and (max-width : 1190px) {
+    .timeline_main {
+        flex-direction: column;
+    }
+    .heading_timeline {
+        font-size: 25px;
+    }
+    .timeline {
+        font-size: 25px;
+    }
+    .timeline_image {
+        width: 500px;
+        height: auto;
+        margin-top: 30px;
+    }
+    .smallbox {
+        font-size: 20px;
+    }
+    .smallbox2 {
+        font-size: 20px;
+    }
+    .smalltext {
+        font-size: 10px;
+    }
+    .sarrow {
+        width: 20px;
+        height: auto;
+    }
+    .smallbox2 {
+        margin-left: 30px;
+    }
+}
