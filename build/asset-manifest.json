@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ddbf999c.css",
+    "main.js": "/static/js/main.ec47d95b.js",
+    "static/media/home_circle_two.png": "/static/media/home_circle_two.67af62820a845b999d57.png",
+    "static/media/sub.png": "/static/media/sub.6a999180dfa9c51a2f1d.png",
+    "static/media/home_circle_one.png": "/static/media/home_circle_one.8b8ff28ed610109c85a1.png",
+    "static/media/home_image_two.png": "/static/media/home_image_two.cb8c6e2e72ee9ff1edba.png",
+    "static/media/home_image.png": "/static/media/home_image.49374b771e53e8601c1a.png",
+    "static/media/contact_us_circle_one.png": "/static/media/contact_us_circle_one.db08a711fedff209a1fe.png",
+    "static/media/SF-UI.ttf": "/static/media/SF-UI.720ea307ec457c77cb5b.ttf",
+    "static/media/contact_us_circle_two.png": "/static/media/contact_us_circle_two.b070f82f7eefc8753faf.png",
+    "static/media/bg_timeline.png": "/static/media/bg_timeline.1c3419f92fb2a0e7d951.png",
+    "static/media/prize1.png": "/static/media/prize1.0a1fbbe358bdfdb2fe95.png",
+    "static/media/disturbia.ttf": "/static/media/disturbia.80d20b3487debd780388.ttf",
+    "static/media/Satoshi-Medium.otf": "/static/media/Satoshi-Medium.e9d34f0493a853cf10c1.otf",
+    "static/media/Satoshi-Bold.otf": "/static/media/Satoshi-Bold.b5dd7deee13e32689234.otf",
+    "static/media/prize2.png": "/static/media/prize2.b9299cb1bf56d3abf063.png",
+    "static/media/prize3.png": "/static/media/prize3.13fd01960068bd9f81bf.png",
+    "index.html": "/index.html",
+    "main.ddbf999c.css.map": "/static/css/main.ddbf999c.css.map",
+    "main.ec47d95b.js.map": "/static/js/main.ec47d95b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddbf999c.css",
+    "static/js/main.ec47d95b.js"
+  ]
+}
