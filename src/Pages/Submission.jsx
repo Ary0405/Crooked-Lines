@@ -28,6 +28,10 @@ function Submission() {
   const [school, setSchool] = useState("");
   const [address, setAddress] = useState("");
   const [percent, setPercent] = useState(0);
+  const [school_state , setSchoolState] = useState("");
+  const [school_city , setSchoolCity] = useState("");
+  const [state , setState] = useState("");
+  const [city , setCity] = useState("");
   const [submission, setSubmission] = React.useState("");
   const navigate = useNavigate();
   const { user } = UserAuth();
@@ -69,7 +73,11 @@ function Submission() {
       dob === "" ||
       number === "" ||
       school === "" ||
-      address === ""
+      address === "" ||
+      state == "" ||
+      city == "" ||
+      school_state == "" ||
+      school_city == ""
     ) {
       alert("Please fill all the fields");
     } else {
@@ -113,6 +121,10 @@ function Submission() {
                   address: address,
                   aadhar_url: url,
                   submission: 1,
+                  state : state,
+                  city : city,
+                  school_state : school_state,
+                  school_city : school_city
                 };
                 await updateDoc(userRef, document);
                 urls.push(url);
@@ -139,6 +151,8 @@ function Submission() {
                 };
                 await updateDoc(userRef, document);
                 console.log(url);
+                alert("Form submitted successfully");
+                window.location.reload();
               }
             );
           }
@@ -147,15 +161,7 @@ function Submission() {
           console.log(downloadUrls);
         });
         console.log(name);
-        // console.log(email);
-        // console.log(dob);
-        // console.log(number);
-        // console.log(school);
-        // console.log(address);
-        // console.log(aadhar);
-        // console.log(submission);
       }
-      alert("Form submitted successfully");
       // navigate("/submission-complete");
     }
   };
@@ -191,11 +197,27 @@ function Submission() {
           )}
         </div>
         <div className="submission_form_group">
-          <label className="submission_label">School</label>
+          <label className="submission_label">School Name</label>
           <input
             className="submission_input"
             type={"text"}
             onChange={(e) => setSchool(e.target.value)}
+          />
+        </div>
+        <div className="submission_form_group">
+          <label className="submission_label">School State</label>
+          <input
+            className="submission_input"
+            type={"text"}
+            onChange={(e) => setSchoolState(e.target.value)}
+          />
+        </div>
+        <div className="submission_form_group">
+          <label className="submission_label">School City</label>
+          <input
+            className="submission_input"
+            type={"text"}
+            onChange={(e) => setSchoolCity(e.target.value)}
           />
         </div>
         <div className="submission_form_group">
@@ -207,7 +229,7 @@ function Submission() {
           />
         </div>
         <div className="submission_form_group">
-          <label className="submission_label">Aadhar Card</label>
+          <label className="submission_label">Government ID</label>
           <div className="input_group">
             <input
               id="file_input"
@@ -221,9 +243,25 @@ function Submission() {
           <div className="warning_box">
             <img className="exclaimation" src={Exclaimation} />
             <p className="warning_text">
-              Upload Aadhar card in png or pdf format less than 5MB
+              Upload Government ID in png or pdf format less than 5MB
             </p>
           </div>
+        </div>
+        <div className="submission_form_group">
+          <label className="submission_label">State</label>
+          <input
+            className="submission_input"
+            type={"text"}
+            onChange={(e) => setState(e.target.value)}
+          />
+        </div>
+        <div className="submission_form_group">
+          <label className="submission_label">City</label>
+          <input
+            className="submission_input"
+            type={"text"}
+            onChange={(e) => setCity(e.target.value)}
+          />
         </div>
         <div className="submission_form_group">
           <label className="submission_label">Address</label>
