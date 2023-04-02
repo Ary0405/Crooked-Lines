@@ -1,6 +1,4 @@
 import './App.css';
-
-import Sign_in from './Pages/Sign_in';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Main from './Pages/Main';
 import { AnimatePresence } from "framer-motion";
@@ -9,6 +7,7 @@ import Submission from './Pages/Submission';
 import { AuthContextProvider } from './Context/AuthContext';
 import ProtectedRoute from './Components/ProtectedRoute';
 import Submission_Complete from './Pages/Submission_Complete';
+import Sign_in from './Pages/Sign_in';
 function App() {
   return (
     <div className="App">

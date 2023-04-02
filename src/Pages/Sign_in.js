@@ -106,5 +106,3 @@ function Sign_in() {
 }
 
 export default Sign_in
-
-// containerStyle={{ "alignItems": "flex-start", "alignSelf": "flex-start", "justifyContent": "center", "display": "flex" }} buttonStyle={{ "alignSelf": "center", "justifyContent": "center", "alignItems": "center" }}
