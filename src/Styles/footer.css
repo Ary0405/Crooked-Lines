@@ -3,6 +3,28 @@
     font-family: Disturbia;
     src: url('../Fonts/disturbia.ttf');
 }
+.footer_main {
+    display: flex;
+    flex-direction: column;
+}
+.divider {
+    border-top: 0.5px solid white;
+    width: 80%;
+}
+.branding {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding-right: 20px;
+}
+.branding > p {
+    margin: 0;
+    margin-bottom: 15px;
+    color: white;
+}
 .footer {
     background-color: black;
     display: flex;

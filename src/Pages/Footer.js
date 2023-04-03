@@ -8,11 +8,12 @@ import mail from '../Assets/mail.png';
 import phone from '../Assets/phone.png';
 import logo from '../Assets/logo.png'
 import '../Styles/footer.css';
+import { Link } from 'react-router-dom';
 
 
 function Footer() {
     return(
-        <>
+        <div className='footer_main' style={{"backgroundColor" : "black"}}>
             <div className='footer'>
                 <div id='logo' className='info'>
                     <div className='footer-title'>
@@ -67,7 +68,11 @@ function Footer() {
                     </div>
                 </div>
             </div>
-        </>
+            <hr className='divider' />
+            <div className='branding'>
+                <Link to='https://www.linkedin.com/in/aryan-sethia' style={{"cursor" : "pointer" , "textDecoration" : "none" , "color" : "white" , "marginBottom" : "10px"}} target='_blank'>Made with ❤️ Sus Coders</Link>
+            </div>
+        </div>
     );
 }
 
