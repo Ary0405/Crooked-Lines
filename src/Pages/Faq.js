@@ -6,26 +6,32 @@ function Faq() {
     const accordionData = [
         {
             title: 'What is the theme of this competition?',
-            content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-          laborum cupiditate possimus labore, hic temporibus velit dicta earum
-          suscipit commodi eum enim atque at? Et perspiciatis dolore iure
-          voluptatem.`
+            content: `This year there is no theme for the contest. All topics are welcome.`
         },
         {
-            title: 'On what bases you will be judged?',
-            content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
-          reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
-          quaerat iure quos dolorum accusantium ducimus in illum vero commodi
-          pariatur? Impedit autem esse nostrum quasi, fugiat a aut error cumque
-          quidem maiores doloremque est numquam praesentium eos voluptatem amet!
-          Repudiandae, mollitia id reprehenderit a ab odit!`
+            title: 'Do I have to adhere to the word limit? Will my entry be disqualified if I go over/under by just a little bit?',
+            content: `Please ensure your entry adheres closely to the 1000-2000 word range to maximize your chances of winning!`
         },
         {
-            title: 'Is plagiarism allowed?',
-            content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
-          quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
-          dolor ut sequi minus iste? Quas?`
-        }
+            title: 'Is there a submission fee?',
+            content: `There is no submission fee for this year’s contest. However, only one submission per individual is allowed.`
+        },
+        {
+            title: 'Can I submit poetry?',
+            content: `Sure, if your poem(s) tell a story, we would love to read your work.`
+        },
+        {
+            title: 'Can I submit more than one piece of flash fiction?',
+            content: `As long as there is a compelling unified narrative, we are happy to receive your entry.`
+        },
+        {
+            title: 'Is there a longlist and a shortlist? Will I be notified if my entry makes it through them?',
+            content: `You will be notified if your entry has made the shortlist and invited to the SNIoE campus for a day of creative writing workshops with our distinguished jury.`
+        },
+        {
+            title: 'Do I need to be an Indian citizen to enter the competition?',
+            content: `This year we require all entrants to submit a Government of India approved identity proof.`
+        },
     ];
     return (
         <div id='faq_main_container' className='faq_main_container'>
