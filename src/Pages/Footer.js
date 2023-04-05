@@ -12,8 +12,11 @@ import { Link } from 'react-router-dom';
 
 
 function Footer() {
-    return(
-        <div className='footer_main' style={{"backgroundColor" : "black"}}>
+    const handleClick = (scrollToId) => {
+        document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth" });
+    };
+    return (
+        <div className='footer_main' style={{ "backgroundColor": "black" }}>
             <div className='footer'>
                 <div id='logo' className='info'>
                     <div className='footer-title'>
@@ -21,56 +24,43 @@ function Footer() {
                         <p className='footer-heading-title'>Crooked Lines</p>
                     </div>
                     <div>
-                        <p className='footer-content footer-title p-tag'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p className='footer-content footer-title p-tag'>The written word is a crooked line, but a crooked line can also be an astounding break from norm.</p>
                     </div>
                 </div>
                 <div id='pages' className='footer-comp'>
                     <p className='footer-heading'>Pages </p>
                     <div className='sub-footer'>
-                        <p className='footer-content'> Lorem ipsum</p>
-                        <p className='footer-content'> Lorem ipsum</p>
-                        <p className='footer-content'> Lorem ipsum</p>
+                        <p className='footer-content' onClick={() => handleClick("home_main_container")}> Home</p>
+                        <p className='footer-content' onClick={() => handleClick("description_main_container")}> About</p>
+                        <p className='footer-content' onClick={() => handleClick("eligible_bg")}> Eligibility</p>
+                        <p className='footer-content' onClick={() => handleClick("timeline_main")}> Timeline</p>
+                        <p className='footer-content' onClick={() => handleClick("main_container")}> Contact</p>
+                        <p className='footer-content' onClick={() => handleClick("faq_main_container")}> FAQ</p>
                     </div>
-                </div>
-                <div id='service' className='footer-comp'>
-                    <p className='footer-heading'>Service </p>
-                    <div className='sub-footer'>
-                        <p className='footer-content'> Lorem ipsum</p>
-                        <p className='footer-content'> Lorem ipsum</p>
-                        <p className='footer-content'> Lorem ipsum</p>
-                    </div>
-
                 </div>
                 <div id='contact' className='footer-comp'>
                     <p className='footer-heading'>Contact </p>
                     <div className='sub-footer'>
                         <div className='sub-contact footer-content'>
-                            <img className='pic' src={phone} alt=''></img>
-                            <p className='footer-content p-tag'>(406) 555-0120</p>
-                        </div>
-                        <div className='sub-contact footer-content'>
                             <img className='pic' src={mail} alt=''></img>
-                            <p className='footer-content p-tag'>mangcoding123@gmail.com</p>
+                            <p className='footer-content p-tag'>crooked.lines@snu.edu.in</p>
                         </div>
                         <div className='sub-contact footer-content'>
                             <img className='location' src={location} alt=''></img>
-                            <p className='footer-content p-tag'>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                            <p className='footer-content p-tag'>Shiv Nadar Institute of Eminence, Dadri, Uttar Pradesh - 201314</p>
                         </div>
                     </div>
                 </div>
                 <div id='media' className='footer-comp'>
                     <p className='footer-heading'>Social media</p>
                     <div className='sub-media'>
-                        <a href='#'><img src={facebook} alt='link to facebook'></img></a>
-                        <a href='#'><img src={instagram} alt='link to instagarm'></img></a>
-                        <a href='#'><img src={twitter} alt='link to twitter'></img></a>
-                        <a href='#'><img src={linkedin} alt='link to linkedin'></img></a>
+                        <Link to='https://www.instagram.com/crooked_liness/'><img src={instagram} alt='link to instagram'></img></Link>
                     </div>
                 </div>
             </div>
             <hr className='divider' />
             <div className='branding'>
-                <Link to='https://www.linkedin.com/in/aryan-sethia' style={{"cursor" : "pointer" , "textDecoration" : "none" , "color" : "white" , "marginBottom" : "10px"}} target='_blank'>Made with ❤️ Sus Coders</Link>
+                <Link to='https://www.linkedin.com/in/aryan-sethia' style={{ "cursor": "pointer", "textDecoration": "none", "color": "white", "marginBottom": "10px" }} target='_blank'>Developed with ❤️ Sus Coders</Link>
             </div>
         </div>
     );

@@ -75,7 +75,9 @@
     align-items: stretch;
     align-content: stretch;
 }
-
+.sub-footer > p {
+    margin-top: 10px;
+}
 .logo {
     height: 48px;
     width: 48px;
