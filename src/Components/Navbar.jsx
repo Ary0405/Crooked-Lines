@@ -22,7 +22,9 @@ function Navbar() {
     <nav className="navbar">
       <div className="container">
         <div className="navbar_heading">
-          <p>Crooked Lines</p>
+          <Link to="/" className="home_link">
+            <p>Crooked Lines</p>
+          </Link>
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <img className="hamburger" src={Hamburger}></img>
@@ -56,14 +58,14 @@ function Navbar() {
               {user ? (
                 <Link
                   style={{ textDecoration: "none", cursor: "pointer" }}
-                  to="submission"
+                  to="/submission"
                 >
                   <p style={{"cursor" : "pointer"}} className="login">Apply</p>
                 </Link>
               ) : (
                 <Link
                   style={{ textDecoration: "none", cursor: "pointer" }}
-                  to="signin"
+                  to="/signin"
                 >
                   <p style={{"cursor" : "pointer"}} className="login">Login</p>
                 </Link>

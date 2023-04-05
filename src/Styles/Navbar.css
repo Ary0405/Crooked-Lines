@@ -103,6 +103,11 @@
   position: relative;
 }
 
+.home_link{
+  text-decoration: none;
+  color: white;
+}
+
 .nav-elements ul a.active::after {
   content: '';
   position: absolute;
