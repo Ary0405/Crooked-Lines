@@ -36,7 +36,7 @@ function Faq() {
     return (
         <div id='faq_main_container' className='faq_main_container'>
             <div className='faq_heading_section'>
-                <img className='faq_image' src={faq} />
+                <img className='faq_image' src={faq} alt=''/>
                 <p className='faq_heading_section_text'>What do you want to know?</p>
             </div>
             <p className='faq_question'>Do you have questions about This<br /> contest? Check out our FAQ <br />section!</p>

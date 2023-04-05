@@ -241,7 +241,7 @@ function Submission() {
             <p className="file_name">Choose File</p>
           </div>
           <div className="warning_box">
-            <img className="exclaimation" src={Exclaimation} />
+            <img className="exclaimation" src={Exclaimation} alt='' />
             <p className="warning_text">
               Upload Government ID in png or pdf format less than 5MB
             </p>
@@ -303,7 +303,7 @@ function Submission() {
             <p className="submission_file_name">Choose File</p>
           </div>
           <div className="warning_box">
-            <img className="exclaimation" src={Exclaimation} />
+            <img className="exclaimation" src={Exclaimation} alt=''/>
             <p className="warning_text">Submission upto 5mb (docx, pdf)</p>
           </div>
         </div>
@@ -314,7 +314,7 @@ function Submission() {
         </div>
       </div>
       <div className="submission_image">
-        <img className="sub_img" src={Sub} />
+        <img className="sub_img" src={Sub} alt=''/>
       </div>
     </div>
   );

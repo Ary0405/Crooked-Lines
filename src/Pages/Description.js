@@ -9,7 +9,7 @@ function Description() {
             <div className='image_container'>
                 <img className='description_image' src={Home_image_two} alt='home_image' />
             </div>
-            <img className='description_image_circle' src={Home_circle_one}/>
+            <img className='description_image_circle' src={Home_circle_one} alt=''/>
             <div className='description_container'>
                 <p className='description_question'>About The Competition</p>
                 <p className='description_content'>The Department of English at Shiv Nadar Institute of Eminence came into existence in July 2011, when the university was founded. Our faculty is highly regarded with PhDs from eminent universities across the world.</p>

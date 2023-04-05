@@ -8,9 +8,9 @@ function Eligible() {
   return (
     <div id='eligible_bg' className='eligible_bg'>
       <div className='prizes_container'>
-        <img className='prizes' src={prize1} />
-        <img className='prizes' src={prize2} />
-        <img className='prizes' src={prize3} />
+        <img className='prizes' src={prize1} alt='prize1'/>
+        <img className='prizes' src={prize2} alt='prize2'/>
+        <img className='prizes' src={prize3} alt='prize3'/>
       </div>
       <div className='box'>
         <p className='heading'>ENGLISH WRITING COMPETITION<span className='linetwo'> Rules & Eligibility?</span></p>

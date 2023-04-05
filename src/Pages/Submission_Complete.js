@@ -14,7 +14,7 @@ function Submission_Complete() {
                     <p className='submission_complete_heading'>Your submission has been recorded!<br />Thankyou for your submission.</p>
                 </div>
                 <div className='submission_complete_image'>
-                    <img className='sub_comp_image' src={Sub} />
+                    <img className='sub_comp_image' src={Sub} alt=''/>
                 </div>
             </div>
         </div>
