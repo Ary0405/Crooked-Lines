@@ -22,8 +22,8 @@ function Contact_us() {
     return (
         <>
             <div id='main_container' className='main_container'>
-                <img className='bg_1' src={background} />
-                <img className='bg_2' src={background_two} />
+                <img className='bg_1' src={background} alt=''/>
+                <img className='bg_2' src={background_two} alt=''/>
                 <p className='contact_us_heading'><span className='questions'>Got questions?</span> We would love to answer<br /> to make this contest <span className='smoother'>smoother</span></p>
                 <p className='contact_us_details'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.<br /> Aliquam in hendrerit urna. Pellentesque sit</p>
                 {/* <button className='linkedin_button'>LinkedIn</button> */}

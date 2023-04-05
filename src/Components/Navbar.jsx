@@ -27,7 +27,7 @@ function Navbar() {
           </Link>
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
-          <img className="hamburger" src={Hamburger}></img>
+          <img className="hamburger" src={Hamburger} alt=''></img>
         </div>
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul className="list_nav">

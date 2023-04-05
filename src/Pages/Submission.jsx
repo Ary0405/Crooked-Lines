@@ -56,7 +56,7 @@ function Submission() {
       });
     getDocs(userRef).then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        if (doc.id == email || doc.id == number) {
+        if (doc.id === email || doc.id === number) {
           const data = doc.data();
           if (data.submission > 0) {
             navigate("/submission-complete");
@@ -74,10 +74,10 @@ function Submission() {
       number === "" ||
       school === "" ||
       address === "" ||
-      state == "" ||
-      city == "" ||
-      school_state == "" ||
-      school_city == ""
+      state === "" ||
+      city === "" ||
+      school_state === "" ||
+      school_city === ""
     ) {
       alert("Please fill all the fields");
     } else {
@@ -241,7 +241,7 @@ function Submission() {
             <p className="file_name">Choose File</p>
           </div>
           <div className="warning_box">
-            <img className="exclaimation" src={Exclaimation} />
+            <img className="exclaimation" src={Exclaimation} alt='' />
             <p className="warning_text">
               Upload Government ID in png or pdf format less than 5MB
             </p>
@@ -303,7 +303,7 @@ function Submission() {
             <p className="submission_file_name">Choose File</p>
           </div>
           <div className="warning_box">
-            <img className="exclaimation" src={Exclaimation} />
+            <img className="exclaimation" src={Exclaimation} alt=''/>
             <p className="warning_text">Submission upto 5mb (docx, pdf)</p>
           </div>
         </div>
@@ -314,7 +314,7 @@ function Submission() {
         </div>
       </div>
       <div className="submission_image">
-        <img className="sub_img" src={Sub} />
+        <img className="sub_img" src={Sub} alt=''/>
       </div>
     </div>
   );

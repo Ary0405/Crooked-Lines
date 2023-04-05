@@ -17,7 +17,7 @@ function Footer() {
             <div className='footer'>
                 <div id='logo' className='info'>
                     <div className='footer-title'>
-                        <img src={logo} className='logo'></img>
+                        <img src={logo} className='logo' alt='crooked lines logo'></img>
                         <p className='footer-heading-title'>Crooked Lines</p>
                     </div>
                     <div>
@@ -45,15 +45,15 @@ function Footer() {
                     <p className='footer-heading'>Contact </p>
                     <div className='sub-footer'>
                         <div className='sub-contact footer-content'>
-                            <img className='pic' src={phone}></img>
+                            <img className='pic' src={phone} alt=''></img>
                             <p className='footer-content p-tag'>(406) 555-0120</p>
                         </div>
                         <div className='sub-contact footer-content'>
-                            <img className='pic' src={mail}></img>
+                            <img className='pic' src={mail} alt=''></img>
                             <p className='footer-content p-tag'>mangcoding123@gmail.com</p>
                         </div>
                         <div className='sub-contact footer-content'>
-                            <img className='location' src={location}></img>
+                            <img className='location' src={location} alt=''></img>
                             <p className='footer-content p-tag'>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
                         </div>
                     </div>
@@ -62,9 +62,9 @@ function Footer() {
                     <p className='footer-heading'>Social media</p>
                     <div className='sub-media'>
                         <a href='#'><img src={facebook} alt='link to facebook'></img></a>
-                        <a href='#'><img src={instagram}></img></a>
-                        <a href='#'><img src={twitter}></img></a>
-                        <a href='#'><img src={linkedin}></img></a>
+                        <a href='#'><img src={instagram} alt='link to instagarm'></img></a>
+                        <a href='#'><img src={twitter} alt='link to twitter'></img></a>
+                        <a href='#'><img src={linkedin} alt='link to linkedin'></img></a>
                     </div>
                 </div>
             </div>
