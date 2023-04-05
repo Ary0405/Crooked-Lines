@@ -17,7 +17,7 @@ export const AuthContextProvider = ({ children }) => {
     };
 
     const signIn = (email, password) => {
-        if (email == 'hr@uhptech.com') {
+        if (email === 'hr@uhptech.com') {
             console.log("login successful")
             return signInWithEmailAndPassword(auth, email, password);
         }

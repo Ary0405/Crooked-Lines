@@ -56,7 +56,7 @@ function Submission() {
       });
     getDocs(userRef).then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        if (doc.id == email || doc.id == number) {
+        if (doc.id === email || doc.id === number) {
           const data = doc.data();
           if (data.submission > 0) {
             navigate("/submission-complete");
@@ -74,10 +74,10 @@ function Submission() {
       number === "" ||
       school === "" ||
       address === "" ||
-      state == "" ||
-      city == "" ||
-      school_state == "" ||
-      school_city == ""
+      state === "" ||
+      city === "" ||
+      school_state === "" ||
+      school_city === ""
     ) {
       alert("Please fill all the fields");
     } else {

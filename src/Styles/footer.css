@@ -51,7 +51,7 @@
 .info {
     display: flex;
     flex-direction: column;
-	align-items: start;
+	align-items: flex-start;
 }
 
 .footer-title {
@@ -122,14 +122,14 @@ p:hover {
 @media (min-width:240px) and (max-width: 768px) {
     .footer {
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
 		padding: 30px 40px 30px 45px;
     }
 
     .info {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
     }
 
     .p-tag {
