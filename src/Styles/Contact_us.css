@@ -78,11 +78,11 @@
     border: 1px solid white;
     border-radius: 13.8377px;
     color: white;
-    padding: 19px 45px;
-    font-size: 18.2983px;
+    padding: 15px 20px;
+    font-size: 15.2983px;
     margin-top: 25px;
     margin-bottom: 30px;
-    width: 50%;
+    width: 30%;
     margin-left: auto;
     margin-right: auto;
     /* z-index: 100; */
@@ -97,9 +97,10 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 600;
-    font-size: 20.456px;
+    font-size: 15.456px;
     color: black;
-    padding: 5px;
+    padding: 10px;
+    margin: 10px;
 }
 
 
@@ -111,9 +112,10 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 600;
-    font-size: 20.456px;
+    font-size: 15.456px;
     color: black;
-    padding: 5px;
+    padding: 10px;
+    margin: 10px;
 }
 
 @media (min-width:240px) and (max-width: 768px) {

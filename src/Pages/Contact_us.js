@@ -11,7 +11,7 @@ function Contact_us() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_00wzxvg', 'template_r3bpwfl', form.current, 'Yl_H0JmFhB7PWMsMZ')
+        emailjs.sendForm('service_3751zek', 'template_v170v12', form.current, 'R8PaA9v1My6UlqV8L')
             .then((result) => {
                 alert('Email sent successfully')
                 console.log(result.text);
@@ -25,7 +25,7 @@ function Contact_us() {
                 <img className='bg_1' src={background} alt=''/>
                 <img className='bg_2' src={background_two} alt=''/>
                 <p className='contact_us_heading'><span className='questions'>Got questions?</span> We would love to answer<br /> to make this contest <span className='smoother'>smoother</span></p>
-                <p className='contact_us_details'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.<br /> Aliquam in hendrerit urna. Pellentesque sit</p>
+                <p className='contact_us_details'>Fill out the form if you have any queries related to the competition</p>
                 {/* <button className='linkedin_button'>LinkedIn</button> */}
                 <div className='form_group'>
                     <form ref={form} className='submit_form' onSubmit={sendEmail}>
@@ -53,7 +53,7 @@ function Contact_us() {
                             placeholder='Your queries here'
                         />
                         
-                        <input type="submit" value="Send" className='send-btn' />
+                        <input style={{"cursor" : "pointer"}} type="submit" value="Send" className='send-btn' />
                     </form>
                 </div>
             </div>
