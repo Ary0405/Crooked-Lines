@@ -1,0 +1,71 @@
+.about_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.jury_main_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    font: Roboto;
+}
+
+.jury{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.jury_main_container p{
+    max-width: 800px;
+}
+
+.jury_img{
+    width: 15%;
+    height: auto;
+    border-radius: 100%;
+}
+
+.about_container p{
+    max-width: 800px;
+}
+
+.about_heading{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.jury_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+@media (min-width:240px) and (max-width: 768px){
+    .jury_container{
+        flex-direction: column;
+    }
+    .jury_img{
+        width: 50%;
+    }
+}

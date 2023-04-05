@@ -8,6 +8,8 @@ import { AuthContextProvider } from './Context/AuthContext';
 import ProtectedRoute from './Components/ProtectedRoute';
 import Submission_Complete from './Pages/Submission_Complete';
 import Sign_in from './Pages/Sign_in';
+import About from './Pages/About';
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,7 @@ function App() {
               <Route exact path='/' element={<Main />} />
               <Route exact path='/otp' element={<Otp />} />
               <Route exact path='/signin' element={<Sign_in />} />
+              <Route exact path='/about' element={<About/>} />
               <Route exact path='/submission' element={<ProtectedRoute><Submission /></ProtectedRoute>} />
               <Route exact path='/submission-complete' element={<ProtectedRoute><Submission_Complete /></ProtectedRoute>} />
             </Routes>
