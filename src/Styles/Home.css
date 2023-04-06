@@ -12,18 +12,21 @@
 .home_main_container {
     background-color: rgba(239, 238, 255, 1);
     display: flex;
-    justify-content: space-evenly;
-    padding-left: 130px;
-    padding-right: 130px;
+    justify-content: center;
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
     padding-top: 100px;
     padding-bottom: 100px;
     align-items: center;
     position: relative;
 }
-
+.home_container_one {
+    margin-right: 30px;
+}
 .home_header {
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
+    font-weight: 500;
     margin: 0;
     z-index: 100;
     line-height: 1;
@@ -37,8 +40,10 @@
 .home_content {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
+    font-weight: 500;
     margin-bottom: 30px;
     z-index: 100;
+    width: 430px;
 }
 
 .beyond {
