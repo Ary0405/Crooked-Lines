@@ -39,7 +39,6 @@ p{
     font-weight: 700;
     font-size: 40px;
     line-height: 144.1%;
-    /* or 71px */
     text-align: center;
 }
 .faq_sections_questions {
@@ -57,7 +56,7 @@ p{
     background: #F7F9FC;
     border-radius: 11px;
     font-family: Satoshi;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .accordian-title-heading {
@@ -98,7 +97,7 @@ p{
     }
     .accordion-title {
         width: 300px;
-        font-size: 10px;
+        font-size: 12px;
         height: 40px;
     }
     .accordian-title-button {
@@ -107,6 +106,6 @@ p{
     }
     .accordion-content {
         width: 300px;
-        font-size: 8px;
+        font-size: 11px;
     }
 }

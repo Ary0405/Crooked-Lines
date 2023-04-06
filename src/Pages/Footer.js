@@ -32,8 +32,6 @@ function Footer() {
                     <div className='sub-footer'>
                         <p className='footer-content' onClick={() => handleClick("home_main_container")}> Home</p>
                         <p className='footer-content' onClick={() => handleClick("description_main_container")}> About</p>
-                        <p className='footer-content' onClick={() => handleClick("eligible_bg")}> Eligibility</p>
-                        <p className='footer-content' onClick={() => handleClick("timeline_main")}> Timeline</p>
                         <p className='footer-content' onClick={() => handleClick("main_container")}> Contact</p>
                         <p className='footer-content' onClick={() => handleClick("faq_main_container")}> FAQ</p>
                     </div>
@@ -43,11 +41,11 @@ function Footer() {
                     <div className='sub-footer'>
                         <div className='sub-contact footer-content'>
                             <img className='pic' src={mail} alt=''></img>
-                            <p className='footer-content p-tag'>crooked.lines@snu.edu.in</p>
+                            <p className='footer-content p-tag'><a className="home_link" href='mailto:crooked.lines@snu.edu.in' target='_blank'>crooked.lines@snu.edu.in</a></p>
                         </div>
                         <div className='sub-contact footer-content'>
                             <img className='location' src={location} alt=''></img>
-                            <p className='footer-content p-tag'>Shiv Nadar Institute of Eminence, Dadri, Uttar Pradesh - 201314</p>
+                            <p className='footer-content p-tag'><a href='https://goo.gl/maps/vyjrn8ztuVQ6DXnk7' className="home_link" target='_blank'>Shiv Nadar Institute of Eminence, Dadri, Uttar Pradesh - 201314</a></p>
                         </div>
                     </div>
                 </div>
