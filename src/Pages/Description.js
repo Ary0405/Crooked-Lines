@@ -2,13 +2,14 @@ import React from 'react'
 import '../Styles/Description.css'
 import Home_image_two from '../Assets/home_image_two.png'
 import Home_circle_one from '../Assets/home_circle_one.png'
+import About_us_section from '../Assets/about_us_section.png'
 import { Link } from 'react-router-dom'
 
 function Description() {
     return (
         <div id='description_main_container' className='description_main_container'>
             <div className='image_container'>
-                <img className='description_image' src={Home_image_two} alt='home_image' />
+                <img className='description_image' src={About_us_section} alt='home_image' />
             </div>
             <img className='description_image_circle' src={Home_circle_one} alt=''/>
             <div className='description_container'>
