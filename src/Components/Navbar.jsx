@@ -9,8 +9,11 @@ function Navbar() {
   const { user, logout } = UserAuth();
   const phoneNmber = useSelector((state) => state.phone);
   const handleClick = (scrollToId) => {
-    // setActiveNavLinkId(navLinkId);
-    document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth" });
+    if(!document.getElementById(scrollToId)){
+      window.location.href = "/";
+    }else{
+      document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth" });
+    } 
   };
   const [showNavbar, setShowNavbar] = useState(false);
 
