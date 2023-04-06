@@ -64,10 +64,13 @@
         flex-direction: column;
     }
     .jury_img{
-        width: 50%;
+        width: 55%;
     }
     .jury_main_container p{
         padding: 0px;
         margin-top: 15px;
+    }
+    .about_container{
+        padding: 50px;
     }
 }
