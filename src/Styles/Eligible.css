@@ -110,11 +110,15 @@ ul {
     .heading {
         display: flex;
         flex-direction: column;
+        font-size: 19px;
     }
 
     .ul_class1 {
         padding: 0;
         margin-left: 10px;
+    }
+    .linetwo {
+        font-size: 17px;
     }
 }
 
