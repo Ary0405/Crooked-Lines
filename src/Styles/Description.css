@@ -5,9 +5,7 @@
     display: flex;
     background-color: rgba(239, 238, 255, 1);
     align-items: center;
-    /* padding-bottom: 40px; */
     padding-left: 40px;
-    /* padding-right: 130px; */
 }
 
 .description_image_circle {
@@ -30,7 +28,7 @@
 .description_container {
     background-color: white;
     border-radius: 100px 0 0 0px;
-    padding: 30px 140px 40px 60px;
+    padding: 10px 120px 40px 60px;
 }
 
 .description_question {
@@ -47,7 +45,6 @@
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    text-align: left;
     color: #000000;
 }
 

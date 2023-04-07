@@ -53,13 +53,15 @@
 }
 
 .apply_button {
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
     z-index: 999;
-    border: 0.729037px solid #000000;
-    border-radius: 37.1809px;
-    padding: 13px 30px;
-    font-size: 15px;
-    box-shadow: 0 8px 16px 0 #0202FC, 0 6px 20px 0 #0202FC;
+    width: 150px;
+    cursor: pointer;
+    /* border: 0.729037px solid #000000; */
+    /* border-radius: 37.1809px; */
+    /* padding: 13px 30px; */
+    /* font-size: 15px; */
+    /* box-shadow: 0 8px 16px 0 #0202FC, 0 6px 20px 0 #0202FC; */
 }
 
 @media (min-width:240px) and (max-width: 768px) {
@@ -73,11 +75,15 @@
     }
 
     .home_header {
-        font-size: 36px;
+        font-size: 24px;
+        margin-left: 10px;
     }
 
     .home_content {
         font-size: 11px;
+        padding-left: 50px;
+        padding-right: 16px;
+        padding-top: 20px;
     }
 
     .home_circle {

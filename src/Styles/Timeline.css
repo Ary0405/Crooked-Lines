@@ -5,15 +5,18 @@
 .timeline_main {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;    
 }
 .main_bg {
     background-color: white;
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-bottom: 70px;
-    margin-top: 70px;
+    /* margin-bottom: 70px; */
+    /* margin-top: 70px; */
+    margin-left: 50px;
     display: flex;
     justify-content: center;
 }
@@ -21,7 +24,7 @@
 .timeline_image {
     top: 12px;
     padding: 5px 5px;
-    width: 465.6px; 
+    width: 550px; 
     height: auto;
     z-index: 100;
     border: 0;
@@ -31,7 +34,7 @@
 
 .heading_timeline{
     font-family: 'Raleway', sans-serif;
-    font-size: 22px; 
+    font-size: 26px; 
     font-style: normal;
     font-weight: 800;
     color: black;
@@ -45,7 +48,7 @@
     font-family: 'Fraunces', serif;
     /* text-transform: uppercase; */
     text-decoration: underline;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 800;
     white-space: nowrap;
     display:inline;
@@ -110,6 +113,8 @@
 @media (min-width:240px) and (max-width: 768px) {
     .timeline_main {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .timeline_image {
         width: 300px;
@@ -131,6 +136,17 @@
     }
     .smallbox2 {
         margin-left: 30px;
+    }
+    .heading_timeline {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .timeline {
+        font-size: 20px;
+    }
+    .main_bg {
+        margin-left: 0px;
+        margin-top: 25px;
     }
 }
 
