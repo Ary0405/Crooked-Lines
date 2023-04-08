@@ -81,7 +81,19 @@ function Submission() {
       school_state === "" ||
       school_city === ""
     ) {
-      alert("Please fill all the fields");
+
+      if(name === '') alert('Please enter your name');
+      else if(email === '') alert('Please enter your email');
+      else if(dob === '') alert('Please enter your date of birth');
+      else if(number === '') alert('Please enter your phone number');
+      else if(school === '') alert('Please enter your school name');
+      else if(address === '') alert('Please enter your address');
+      else if(state === '') alert('Please enter your state');
+      else if(city === '') alert('Please enter your city');
+      else if(school_state === '') alert('Please enter your school state');
+      else if(school_city === '') alert('Please enter your school city');
+      else alert('Please enter all the fields');
+
     } else {
       console.log(dob);
       if (!aadhar || !submission) {
@@ -267,7 +279,7 @@ function Submission() {
                     id="file_input"
                     className="custom-file-input"
                     type={"file"}
-                    accept="/image/*"
+                    accept=".pdf,image/*"
                     onChange={(e) => setAadhar(e.target.files[0])}
                   />
                   <p className="file_name">Choose File</p>
@@ -307,9 +319,16 @@ function Submission() {
                 <label className="submission_label">Phone Number</label>
                 {!phoneField ? (
                   <input
-                    className="submission_input"
-                    type={"text"}
-                    onChange={(e) => setNumber(e.target.value)}
+                  className="submission_input"
+                  type={'number'}
+                  pattern="[0-9]*"
+                  min='1000000000'
+                  max='9999999999'
+                  onChange={(e) => 
+                    (e.target.validity.valid ? 
+                      setNumber(e.target.value) : 
+                      null)
+                  }
                   />
                 ) : (
                   <input
@@ -329,7 +348,7 @@ function Submission() {
                     id="submission_file_input"
                     className="custom-file-input"
                     type={"file"}
-                    accept="/image/*"
+                    accept='.doc,.docx,.pdf'
                     onChange={(e) => setSubmission(e.target.files[0])}
                   />
                   <p className="submission_file_name">Choose File</p>
@@ -422,7 +441,7 @@ function Submission() {
                   id="file_input"
                   className="custom-file-input"
                   type={"file"}
-                  accept="/image/*"
+                  accept=".pdf, image/*"
                   onChange={(e) => setAadhar(e.target.files[0])}
                 />
                 <p className="file_name">Choose File</p>
@@ -463,8 +482,15 @@ function Submission() {
               {!phoneField ? (
                 <input
                   className="submission_input"
-                  type={"text"}
-                  onChange={(e) => setNumber(e.target.value)}
+                  type={'number'}
+                  pattern="[0-9]*"
+                  min='1000000000'
+                  max='9999999999'
+                  onChange={(e) => 
+                    (e.target.validity.valid ? 
+                      setNumber(e.target.value) : 
+                      null)
+                  }
                 />
               ) : (
                 <input
@@ -484,14 +510,14 @@ function Submission() {
                   id="submission_file_input"
                   className="custom-file-input"
                   type={"file"}
-                  accept="/image/*"
+                  accept=".doc,.docx,.pdf"
                   onChange={(e) => setSubmission(e.target.files[0])}
                 />
                 <p className="submission_file_name">Choose File</p>
               </div>
               <div className="warning_box">
                 <img className="exclaimation" src={Exclaimation} alt="" />
-                <p className="warning_text">Submission upto 5mb (docx, pdf)</p>
+                <p className="warning_text">Submission upto 5mb (docx, doc, pdf)</p>
               </div>
             </div>
             <div className="submit_button">
