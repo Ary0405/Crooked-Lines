@@ -3,8 +3,7 @@ import '../Styles/Contact_us.css'
 import background from '../Assets/contact_us_circle_one.png'
 import background_two from '../Assets/contact_us_circle_two.png'
 import emailjs from '@emailjs/browser';
-import Faq from './Faq'
-// service_00wzxvg
+
 function Contact_us() {
     const form = useRef();
 
@@ -26,17 +25,15 @@ function Contact_us() {
                 <img className='bg_2' src={background_two} alt=''/>
                 <p className='contact_us_heading'><span className='questions'>Got questions?</span> We would love to answer<br /> to make this contest <span className='smoother'>smoother</span></p>
                 <p className='contact_us_details'>Fill out the form if you have any queries related to the competition</p>
-                {/* <button className='linkedin_button'>LinkedIn</button> */}
+
                 <div className='form_group'>
                     <form ref={form} className='submit_form' onSubmit={sendEmail}>
-                        {/* <label for="name" className='label_title'>Name</label> */}
                         <input 
                             className="submission_input_contact"
                             type={"text"} 
                             name="name" 
                             placeholder='Name' 
                         />
-                        {/* <label for="email" className='label_title'>Email</label> */}
                         <input 
                             type="email" 
                             name="email" 
@@ -44,7 +41,6 @@ function Contact_us() {
                             className="submission_input_contact"
                             required
                         />
-                        {/* <label for="message" className='label_title'>Message</label> */}
                         <textarea 
                             rows={5}
                             cols={50}

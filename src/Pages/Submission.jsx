@@ -11,7 +11,6 @@ import {
   getDocs,
   doc,
   updateDoc,
-  setDoc,
 } from "firebase/firestore";
 import Exclaimation from "../Assets/exclaimation.png";
 const db = getFirestore();
@@ -133,7 +132,7 @@ function Submission() {
             );
           }
         );
-        let submissionUrl;
+        
         uploadSubmissionTask.on(
           "state_changed",
           (snapshot) => {
@@ -225,6 +224,8 @@ function Submission() {
           <input
             className="submission_input"
             type={"date"}
+            min={"2003-01-01"}
+            max={"2023-05-01"}
             onChange={(e) => setDob(e.target.value)}
           />
         </div>

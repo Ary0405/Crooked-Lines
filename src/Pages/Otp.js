@@ -1,8 +1,6 @@
 import React from 'react'
-import PhoneInput from 'react-phone-input-2';
 import { useSelector , useDispatch } from 'react-redux';
-import { auth, provider } from '../firebase'
-import { toast, Toaster } from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 import { actionCreators } from '../State';
 import OtpInput from 'otp-input-react';
 import { useNavigate } from "react-router-dom";
@@ -17,7 +15,6 @@ const db = getFirestore();
 function Otp() {
     const dispatch = useDispatch();
     const [otp, setOtp] = React.useState('');
-    const [phone, setPhone] = React.useState('');
     const phoneNumber = useSelector(state => state.phone);
     const navigate = useNavigate();
     function onOTPVerify() {

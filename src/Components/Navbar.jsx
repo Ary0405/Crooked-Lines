@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
 import Hamburger from "../Assets/hamburg.png";
 import { Link } from "react-router-dom";
 import { UserAuth } from "../Context/AuthContext";
@@ -7,7 +6,6 @@ import "../Styles/Navbar.css";
 
 function Navbar() {
   const { user, logout } = UserAuth();
-  const phoneNmber = useSelector((state) => state.phone);
   const handleClick = (scrollToId) => {
     if(!document.getElementById(scrollToId)){
       window.location.href = "/";

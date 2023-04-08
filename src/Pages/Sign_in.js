@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { auth, provider } from '../firebase'
-import { signInWithPopup } from 'firebase/auth'
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { signInWithPopup,RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
 import { toast, Toaster } from 'react-hot-toast';
+import { useDispatch, useSelector } from 'react-redux';
+import { actionCreators } from '../State';
+import { useNavigate } from "react-router-dom";
 import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css'
 import Google_logo from '../Assets/google_logo.png'
+import 'react-phone-input-2/lib/style.css'
+import '../Styles/Sign_in.css'
 import {
     getFirestore,
     setDoc,
     doc,
+    getDoc,
 } from "firebase/firestore";
-import '../Styles/Sign_in.css'
-import { useDispatch, useSelector } from 'react-redux';
-import { actionCreators } from '../State';
-import { useNavigate } from "react-router-dom";
 const db = getFirestore();
 
 function Sign_in() {
@@ -23,7 +23,6 @@ function Sign_in() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [value, setValue] = useState('');
-    const [otp, setOtp] = useState('');
     const [phone, setPhone] = useState('');
     const handleClick = async () => {
         signInWithPopup(auth, provider).then(async (data) => {
@@ -34,9 +33,16 @@ function Sign_in() {
                 "name": data.user.displayName,
                 "submission": 0,
             }
-            await setDoc(doc(db, "users", data.user.email), document);
+            let newUser = await getDoc(doc(db, "users", data.user.email));
+
+            if (!newUser.exists()) {
+                await setDoc(doc(db, "users", data.user.email), document);
+                console.log("User registered")
+            }
+            else {
+                console.log("User logged in")
+            }
             dispatch(actionCreators.loginUser(true))
-            console.log("User registered")
             navigate('/');
         })
     }

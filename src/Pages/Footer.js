@@ -1,11 +1,7 @@
 import React from 'react';
-import facebook from '../Assets/fb.png';
 import instagram from '../Assets/instagram.png';
-import twitter from '../Assets/twitter.png';
-import linkedin from '../Assets/linkedin.png';
 import location from '../Assets/location.png';
 import mail from '../Assets/mail.png';
-import phone from '../Assets/phone.png';
 import logo from '../Assets/logo.png'
 import '../Styles/footer.css';
 import { Link } from 'react-router-dom';
