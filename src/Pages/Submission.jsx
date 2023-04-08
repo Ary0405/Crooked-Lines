@@ -148,7 +148,7 @@ function Submission() {
             );
           }
         );
-        let submissionUrl;
+        
         uploadSubmissionTask.on(
           "state_changed",
           (snapshot) => {

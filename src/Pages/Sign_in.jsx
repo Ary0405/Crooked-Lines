@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { auth, provider } from "../firebase";
-import { signInWithPopup } from "firebase/auth";
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { signInWithPopup,RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 import { toast, Toaster } from "react-hot-toast";
 import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
-import Google_logo from "../Assets/google_logo.png";
-import { getFirestore, setDoc, doc } from "firebase/firestore";
-import "../Styles/Sign_in.css";
+import { getFirestore, setDoc, doc, getDoc } from "firebase/firestore";
 import { useDispatch, useSelector } from "react-redux";
 import { actionCreators } from "../State";
 import { useNavigate } from "react-router-dom";
 import { TailSpin } from "react-loader-spinner";
-import Loading from "../Components/Loading";
+import "../Styles/Sign_in.css";
+import "react-phone-input-2/lib/style.css";
+import Google_logo from "../Assets/google_logo.png";
+
 const db = getFirestore();
 
 function Sign_in() {
@@ -34,9 +33,17 @@ function Sign_in() {
           name: data.user.displayName,
           submission: 0,
         };
-        await setDoc(doc(db, "users", data.user.email), document);
+        let newUser = await getDoc(doc(db, "users", data.user.email));
+        console.log(newUser.exists());
+
+        if(newUser.exists()){
+          console.log("User logged in");
+        }else{
+          await setDoc(doc(db, "users", data.user.email), document);
+          console.log("User registered");
+        }
+
         dispatch(actionCreators.loginUser(true));
-        console.log("User registered");
         setLoading(false);
         navigate("/");
       })
