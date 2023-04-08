@@ -11,8 +11,8 @@ function Timeline() {
                 <p><span className='heading_timeline'>have a look at the </span><span className='timeline'>Timeline</span>
                 </p>
                 <div className='flex-container'>
-                    <p className='smallbox'><span className='date'>03</span><br />April 2023<br /><img className='sarrow' src={arrow} alt='' /><span className='smalltext'>call for<br />submission open</span></p>
-                    <p className='smallbox2'><span className='date'>05</span><br />August 2023<br /><img className='sarrow' src={arrow} alt=''/><span className='smalltext'>submission<br />deadline</span></p>
+                    <p className='smallbox'><span className='date'>10</span><br />April 2023<br /><img className='sarrow' src={arrow} alt='' /><span className='smalltext'>call for<br />submission open</span></p>
+                    <p className='smallbox2'><span className='date'>15</span><br />August 2023<br /><img className='sarrow' src={arrow} alt=''/><span className='smalltext'>submission<br />deadline</span></p>
                     <p className='smallbox2'><span className='date'>05</span><br />October 2023<br /><img className='sarrow' src={arrow} alt=''/><span className='smalltext'>longlist<br />annoucement</span></p>
                 </div>
                 <div className='flex-container'>

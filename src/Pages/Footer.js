@@ -13,7 +13,11 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     const handleClick = (scrollToId) => {
-        document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth" });
+        if(!document.getElementById(scrollToId)){
+            window.location.href = "/";
+        }else{
+            document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth" });
+        } 
     };
     return (
         <div className='footer_main' style={{ "backgroundColor": "black" }}>
