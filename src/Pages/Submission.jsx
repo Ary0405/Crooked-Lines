@@ -6,6 +6,7 @@ import { storage } from "../firebase";
 import { UserAuth } from "../Context/AuthContext";
 import { TailSpin } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
+import uniqid from "uniqid";
 import Exclaimation from "../Assets/exclaimation.png";
 import {
   getFirestore,
@@ -17,7 +18,11 @@ import {
 const db = getFirestore();
 
 function Submission() {
+  const id = uniqid("crookedlines");
+  const [registration,] = useState(id);
   const userRef = collection(db, "users");
+  const [, setAadharFileName] = useState("");
+  const [submissionFileName, setSubmissionFileName] = useState("");
   const [name, setName] = useState("");
   const [phoneField, setPhoneField] = useState(false);
   const [emailField, setEmailField] = useState(false);
@@ -27,7 +32,7 @@ function Submission() {
   const [aadhar, setAadhar] = useState("");
   const [school, setSchool] = useState("");
   const [address, setAddress] = useState("");
-  const [percent, setPercent] = useState(0);
+  const [, setPercent] = useState(0);
   const [school_state, setSchoolState] = useState("");
   const [school_city, setSchoolCity] = useState("");
   const [state, setState] = useState("");
@@ -47,12 +52,14 @@ function Submission() {
     }
     document.getElementById("file_input").addEventListener("change", (e) => {
       const fileName = e.target.files[0].name;
+      setAadharFileName(fileName);
       document.querySelector(".file_name").innerHTML = fileName;
     });
     document
       .getElementById("submission_file_input")
       .addEventListener("change", (e) => {
         const fileName = e.target.files[0].name;
+        setSubmissionFileName(fileName);
         document.querySelector(".submission_file_name").innerHTML = fileName;
       });
     getDocs(userRef).then((querySnapshot) => {
@@ -65,7 +72,7 @@ function Submission() {
         }
       });
     });
-  });
+  },[user.email, user.phoneNumber, userRef, email, number, navigate]);
   const handleSubmit = async () => {
     let urls = [];
     if (
@@ -80,19 +87,24 @@ function Submission() {
       school_state === "" ||
       school_city === ""
     ) {
-
-      if(name === '') alert('Please enter your name proper');
-      else if(email === '') alert('Please enter your email');
-      else if(dob === '') alert('Please enter your date of birth');
-      else if(number === '') alert('Enter a valid phone number');
-      else if(school === '') alert('Please enter your school name');
-      else if(address === '') alert('Please enter your address');
-      else if(state === '') alert('Please enter your state');
-      else if(city === '') alert('Please enter your city');
-      else if(school_state === '') alert('Please enter your school state');
-      else if(school_city === '') alert('Please enter your school city');
-      else alert('Please enter all the fields');
-
+      if (name === "") alert("Please enter your name proper");
+      else if (email === "") alert("Please enter your email");
+      else if (dob === "") alert("Please enter your date of birth");
+      else if (number === "") alert("Enter a valid phone number");
+      else if (school === "") alert("Please enter your school name");
+      else if (address === "") alert("Please enter your address");
+      else if (state === "") alert("Please enter your state");
+      else if (city === "") alert("Please enter your city");
+      else if (school_state === "") alert("Please enter your school state");
+      else if (school_city === "") alert("Please enter your school city");
+      else alert("Please enter all the fields");
+    } else if (
+      submissionFileName.substring(0, submissionFileName.lastIndexOf(".")) !==
+      registration
+    ) {
+      alert(
+        "Please upload the file with the same name as the registration number"
+      );
     } else {
       if (!aadhar || !submission) {
         alert("Please upload files");
@@ -105,7 +117,7 @@ function Submission() {
           submissionRef,
           submission
         );
-        let aadharUrl;
+        // var aadharUrl;
         let userRef;
         if (emailField) {
           userRef = doc(db, "users", user.email);
@@ -124,15 +136,16 @@ function Submission() {
           async () => {
             await getDownloadURL(uploadAadharTask.snapshot.ref).then(
               async (url) => {
-                aadharUrl = url;
+                var aadharUrl = url;
                 let document = {
+                  registrationNumber: registration,
                   email: email,
                   name: name,
                   dob: dob,
                   number: number,
                   school: school,
                   address: address,
-                  aadhar_url: url,
+                  aadhar_url: aadharUrl,
                   submission: 1,
                   state: state,
                   city: city,
@@ -145,7 +158,7 @@ function Submission() {
             );
           }
         );
-        
+
         uploadSubmissionTask.on(
           "state_changed",
           (snapshot) => {
@@ -169,9 +182,6 @@ function Submission() {
             );
           }
         );
-        Promise.all(urls).then((downloadUrls) => {
-          console.log(downloadUrls);
-        });
       }
     }
   };
@@ -312,16 +322,14 @@ function Submission() {
                 <label className="submission_label">Phone Number</label>
                 {!phoneField ? (
                   <input
-                  className="submission_input"
-                  type={'number'}
-                  pattern="[0-9]*"
-                  min='1000000000'
-                  max='9999999999'
-                  onChange={(e) => 
-                    (e.target.validity.valid ? 
-                      setNumber(e.target.value) : 
-                      null)
-                  }
+                    className="submission_input"
+                    type={"number"}
+                    pattern="[0-9]*"
+                    min="1000000000"
+                    max="9999999999"
+                    onChange={(e) =>
+                      e.target.validity.valid ? setNumber(e.target.value) : null
+                    }
                   />
                 ) : (
                   <input
@@ -341,7 +349,7 @@ function Submission() {
                     id="submission_file_input"
                     className="custom-file-input"
                     type={"file"}
-                    accept='.doc,.docx,.pdf'
+                    accept=".doc,.docx,.pdf"
                     onChange={(e) => setSubmission(e.target.files[0])}
                   />
                   <p className="submission_file_name">Choose File</p>
@@ -367,6 +375,24 @@ function Submission() {
       ) : (
         <div className="submission_main_container">
           <div className="submission_form_container">
+            <div className="submission_form_group">
+              <label className="submission_label">
+                Unique ID / Registeration Number
+              </label>
+              <input
+                className="submission_input"
+                type={"text"}
+                style={{ color: "grey" }}
+                value={registration}
+                disabled={true}
+              />
+              <div className="warning_box">
+                <img className="exclaimation" src={Exclaimation} alt="" />
+                <p className="warning_text">
+                  Your file name should be same as the Registeration Number
+                </p>
+              </div>
+            </div>
             <div className="submission_form_group">
               <label className="submission_label">Name</label>
               <input
@@ -473,18 +499,24 @@ function Submission() {
             <div className="submission_form_group">
               <label className="submission_label">Phone Number</label>
               {!phoneField ? (
-                <input
-                  className="submission_input"
-                  type={'number'}
-                  pattern="[0-9]*"
-                  min='1000000000'
-                  max='9999999999'
-                  onChange={(e) => 
-                    (e.target.validity.valid ? 
-                      setNumber(e.target.value) : 
-                      null)
-                  }
-                />
+                <>
+                  <input
+                    className="submission_input"
+                    type={"number"}
+                    pattern="[0-9]*"
+                    min="1000000000"
+                    max="9999999999"
+                    onChange={(e) =>
+                      e.target.validity.valid ? setNumber(e.target.value) : null
+                    }
+                  />
+                  <div className="warning_box">
+                    <img className="exclaimation" src={Exclaimation} alt="" />
+                    <p className="warning_text">
+                      Enter 10 digit phone number
+                    </p>
+                  </div>
+                </>
               ) : (
                 <input
                   value={parseInt(number)}
@@ -510,7 +542,9 @@ function Submission() {
               </div>
               <div className="warning_box">
                 <img className="exclaimation" src={Exclaimation} alt="" />
-                <p className="warning_text">Submission upto 5mb (docx, doc, pdf)</p>
+                <p className="warning_text">
+                  Submission upto 5mb (docx, doc, pdf)
+                </p>
               </div>
             </div>
             <div className="submit_button">

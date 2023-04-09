@@ -42,11 +42,11 @@ function Footer() {
                     <div className='sub-footer'>
                         <div className='sub-contact footer-content'>
                             <img className='pic' src={mail} alt=''></img>
-                            <p className='footer-content p-tag'><a className="home_link" href='mailto:crooked.lines@snu.edu.in' target='_blank'>crooked.lines@snu.edu.in</a></p>
+                            <p className='footer-content p-tag'><a className="home_link" href='mailto:crooked.lines@snu.edu.in' rel='noreferrer' target='_blank'>crooked.lines@snu.edu.in</a></p>
                         </div>
                         <div className='sub-contact footer-content'>
                             <img className='location' src={location} alt=''></img>
-                            <p className='footer-content p-tag'><a href='https://goo.gl/maps/vyjrn8ztuVQ6DXnk7' className="home_link" target='_blank'>Shiv Nadar Institute of Eminence, Dadri, Uttar Pradesh - 201314</a></p>
+                            <p className='footer-content p-tag'><a href='https://goo.gl/maps/vyjrn8ztuVQ6DXnk7' className="home_link" rel='noreferrer' target='_blank'>Shiv Nadar Institute of Eminence, Dadri, Uttar Pradesh - 201314</a></p>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ function Footer() {
             </div>
             <hr className='divider' />
             <div className='branding'>
-                <Link to='https://www.linkedin.com/in/aryan-sethia' style={{ "cursor": "pointer", "textDecoration": "none", "color": "white", "marginBottom": "10px" }} target='_blank'>Developed with ❤️ Sus Coders</Link>
+                <Link to='https://www.linkedin.com/in/aryan-sethia' style={{ "cursor": "pointer", "textDecoration": "none", "color": "white", "marginBottom": "10px"}} target='_blank'>Developed By Sus Coders</Link>
             </div>
         </div>
     );

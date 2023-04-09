@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector , useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toast } from 'react-hot-toast';
 import { actionCreators } from '../State';
 import OtpInput from 'otp-input-react';
@@ -16,7 +16,6 @@ const db = getFirestore();
 function Otp() {
     const dispatch = useDispatch();
     const [otp, setOtp] = React.useState('');
-    const phoneNumber = useSelector(state => state.phone);
     const navigate = useNavigate();
     function onOTPVerify() {
         window.confirmationResult.confirm(otp).then(async (res) => {

@@ -46,7 +46,8 @@
     font-weight: 600;
     font-size: 20.456px;
     color: black;
-    padding: 5px;
+    padding-left: 20px;
+    padding-right: 10px;
 }
 
 .warning_box {

@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/Navbar';
-import Contact_us from './Contact_us';
+import ContactUs from './Contact_us';
 import Description from './Description';
 import Eligible from './Eligible';
 import Faq from './Faq';
@@ -16,7 +16,7 @@ function Main() {
             <Description />
             <Eligible />
             <Timeline />
-            <Contact_us />
+            <ContactUs />
             <Faq />
             <Footer />
         </div>
