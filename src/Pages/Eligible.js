@@ -13,18 +13,20 @@ function Eligible() {
         <img className='prizes' src={prize3} alt='prize3' />
       </div>
       <div className='box'>
-        <p className='heading'>ENGLISH WRITING COMPETITION<span className='linetwo'> Rules & Eligibility?</span></p>
+        <p className='heading'>ENGLISH WRITING COMPETITION<span className='linetwo'> Rules & Eligibility</span></p>
         <ul className='ul_class1'>
-          <li className='list'>Entries must be between 1000-2000 words.</li>
-          <li className='list'>Contestants must be 16-18 years old and in<br />class 10-12.</li>
-          <li className='list'>All entries must be original and in English to<br /> avoid disqualification.</li>
-          <li className='list'>Contestants must upload a Government-issued<br /> ID as proof of identity.</li>
+          <li className='list'>Word limit for the submission: 1000 - 2000 words </li>
+          <li className='list'>Authors must be between 16 to 18 years of<br/> age as of final date of submission. </li>
+          <li className='list'>Only unpublished works will be considered </li>
+          <li className='list'>Plagiarized entries will be disqualified.</li>
+          <li className='list'>A Government of India issued identity document<br/> must be scanned and uploaded as identity proof<br/> by contestants. The competition is open only to <br/>Indian residents/citizens. </li>
         </ul>
         <ul className='ul_class1'>
-          <li className='list'>No ID markers allowed in the document.</li>
-          <li className='list'>Entries should be typed, double-spaced, Times<br /> New Roman font (12pt), and submitted in DOCX<br />or PDF formats.</li>
-          <li className='list'>Plagiarized entries will be disqualified.</li>
+          <li className='list'>All entries must be original and in English </li>
+          <li className='list'>No identifying markers allowed in the document<br/> including the document name</li>
+          <li className='list'>Only one submission per person is allowed</li>
           <li className='list'>The decision of the jury is final and cannot be<br /> challenged.</li>
+          <li className='list'>Entries should be typed, double-spaced,<br /> Times New Roman font (12pt), and to be submitted<br />in DOCX, DOC or PDF format</li>
         </ul>
       </div>
     </div>

@@ -31,8 +31,8 @@
     margin-top: 40px;
     border-radius: 20px;
     padding-top: 35px;
-    width: 700.46px;
-    height: 350px;
+    width: 800.00px;
+    height: 400px;
     text-align: center;
     box-shadow: 20px 30px 40px #D0A7DD, 0px 10px 30px #ECA2C3;
 }
@@ -73,7 +73,7 @@ ul {
     margin-left: 10px;
     margin-bottom: 8px;
     text-align: left;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
     z-index: 100;
