@@ -3,7 +3,7 @@ import '../Styles/Submission_Complete.css'
 import Sub from "../Assets/sub.png";
 import { useNavigate } from "react-router-dom";
 
-function Submission_Complete() {
+function SubmissionComplete() {
     const navigate = useNavigate();
     return (
         <div>
@@ -21,4 +21,4 @@ function Submission_Complete() {
     )
 }
 
-export default Submission_Complete
+export default SubmissionComplete

@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { auth, provider } from "../firebase";
-import { signInWithPopup,RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import {
+  signInWithPopup,
+  RecaptchaVerifier,
+  signInWithPhoneNumber,
+} from "firebase/auth";
 import { toast, Toaster } from "react-hot-toast";
 import PhoneInput from "react-phone-input-2";
 import { getFirestore, setDoc, doc, getDoc } from "firebase/firestore";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { actionCreators } from "../State";
 import { useNavigate } from "react-router-dom";
 import { TailSpin } from "react-loader-spinner";
@@ -14,12 +18,10 @@ import Google_logo from "../Assets/google_logo.png";
 
 const db = getFirestore();
 
-function Sign_in() {
-  const user = useSelector((state) => state.user);
-  const phoneNumber = useSelector((state) => state.phone);
+function SignIn() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [value, setValue] = useState("");
+  const [, setValue] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
   const handleClick = async () => {
@@ -35,7 +37,7 @@ function Sign_in() {
         };
         let newUser = await getDoc(doc(db, "users", data.user.email));
 
-        if(!newUser.exists())
+        if (!newUser.exists())
           await setDoc(doc(db, "users", data.user.email), document);
 
         dispatch(actionCreators.loginUser(true));
@@ -46,9 +48,6 @@ function Sign_in() {
         setLoading(false);
       });
   };
-  useEffect(() => {
-    setValue(localStorage.getItem("user"));
-  });
   function onCaptchaVerify() {
     if (!window.recaptchaVerifier) {
       window.recaptchaVerifier = new RecaptchaVerifier(
@@ -80,22 +79,24 @@ function Sign_in() {
         .catch((error) => {
           console.log(error);
         });
-      
     }
   }
 
   return (
     <>
       {loading ? (
-        <div
-        >
+        <div>
           <TailSpin
             height="80"
             width="80"
             color="#4B45A3"
             ariaLabel="tail-spin-loading"
             radius="1"
-            wrapperStyle={{"display":"grid" , "placeItems":"center" , "height":"100vh"}}
+            wrapperStyle={{
+              display: "grid",
+              placeItems: "center",
+              height: "100vh",
+            }}
             wrapperClass=""
             visible={true}
           />
@@ -153,4 +154,4 @@ function Sign_in() {
   );
 }
 
-export default Sign_in;
+export default SignIn;

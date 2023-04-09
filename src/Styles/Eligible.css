@@ -8,6 +8,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding-bottom: 40px;
 }
 
 .prizes_container {
@@ -98,6 +99,7 @@ ul {
 @media (max-width: 768px) {
     .eligible_bg {
         flex-direction: column;
+        padding-bottom: 0px;
     }
 
     .prizes_container {

@@ -31,8 +31,8 @@ function Eligible() {
           <li className='list'>Entries should be typed, double-spaced,<br /> Times New Roman font (12pt), and to be submitted<br />in DOCX, DOC or PDF format</li>
         </ul>
         <div className='admissions_box'>
-          <img className='admissions_image' src={submit} />
-          <Link target='_blank' to='https://snuadmissions.com/'><img className='admissions_image' src={apply_now} /></Link>
+          <img alt='admissions' className='admissions_image' src={submit} />
+          <Link target='_blank' to='https://snuadmissions.com/'><img alt='' className='admissions_image' src={apply_now} /></Link>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import '../Styles/Contact_us.css'
 import background from '../Assets/contact_us_circle_one.png'
 import background_two from '../Assets/contact_us_circle_two.png'
 import emailjs from '@emailjs/browser';
-function Contact_us() {
+function ContactUs() {
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -54,4 +54,4 @@ function Contact_us() {
     )
 }
 
-export default Contact_us
+export default ContactUs
