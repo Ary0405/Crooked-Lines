@@ -11,7 +11,7 @@ function About() {
             <Navbar />
             <div className='about_container'>
                 <div className='details_container'>
-                    <p className='about_heading'>About the <span className='about_competition'>Competition</span></p>
+                    <p className='about_heading'>About the <span className='about_competition'>English Department</span></p>
                     <p className='about_content'>
                         To foster and encourage literary and creative talent in young writers, the English department at the Shiv Nadar Institute of Eminence is organizing its first annual Short Story Writing Competition ‘Crooked Lines’. We are looking for stories that entertain the reader and reflect on the world around us. We welcome original short stories in any form, including creative nonfiction, as well as pieces that do not fit strictly into any of the usual genres. The written word is a crooked line, but a crooked line can also be an astounding break from norm. For more on how to submit, please read the guidelines carefully.
                     </p>
