@@ -32,7 +32,7 @@
     border-radius: 20px;
     padding-top: 35px;
     width: 800.00px;
-    height: 400px;
+    /* height: 400px; */
     text-align: center;
     box-shadow: 20px 30px 40px #D0A7DD, 0px 10px 30px #ECA2C3;
 }
@@ -60,7 +60,8 @@
 ul {
     margin-right: 10px;
     margin-left: 0px;
-    list-style-image: url('../Assets/Star.png');
+    /* list-style-image: url('../Assets/Star.png'); */
+    list-style: none;
     display: inline-block;
 }
 
@@ -76,7 +77,22 @@ ul {
     font-size: 13px;
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
+    background: url('../Assets/Star.png') left center no-repeat;
+    padding-left: 20px;
     z-index: 100;
+}
+
+.admissions_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.admissions_image {
+    width: 300px;
+    height : auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
@@ -119,6 +135,9 @@ ul {
     }
     .linetwo {
         font-size: 17px;
+    }
+    .admissions_box {
+        flex-direction: column;
     }
 }
 

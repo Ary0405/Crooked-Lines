@@ -13,11 +13,10 @@ function Timeline() {
                 <div className='flex-container'>
                     <p className='smallbox'><span className='date'>10</span><br />April 2023<br /><img className='sarrow' src={arrow} alt='' /><span className='smalltext'>call for<br />submission open</span></p>
                     <p className='smallbox2'><span className='date'>15</span><br />August 2023<br /><img className='sarrow' src={arrow} alt=''/><span className='smalltext'>submission<br />deadline</span></p>
-                    <p className='smallbox2'><span className='date'>05</span><br />October 2023<br /><img className='sarrow' src={arrow} alt=''/><span className='smalltext'>longlist<br />annoucement</span></p>
+                    <p className='smallbox2'><span className='date'>26</span><br />October 2023<br /><img className='sarrow' src={arrow} alt=''/><span className='smalltext'>shortlist<br />announcement</span></p>
                 </div>
                 <div className='flex-container'>
-                    <p className='smallbox'><span className='date'>26</span><br />October 2023<br /><img className='sarrow' src={arrow} alt=''/><span className='smalltext'>shortlist<br />announcement</span></p>
-                    <p className='smallbox2'><span className='date'>25</span><br />November 2023<br /><img className='sarrow' src={arrow} alt=''/><span className='smalltext'>prize giving<br />ceremony</span></p>
+                    <p className='smallbox'><span className='date'>25</span><br />November 2023<br /><img className='sarrow' src={arrow} alt=''/><span className='smalltext'>prize giving<br />ceremony</span></p>
                 </div>
             </div>
         </div>

@@ -71,19 +71,17 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 10px;
     }
 
     .home_header {
         font-size: 24px;
-        margin-left: 10px;
     }
 
     .home_content {
         font-size: 11px;
-        padding-left: 50px;
-        padding-right: 16px;
-        padding-top: 20px;
+        width: 300px;
+        margin-left: 10px;
     }
 
     .home_circle {
@@ -97,6 +95,14 @@
 
     .apply_button {
         margin-bottom: 40px;
+    }
+
+    .home_container_one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
     }
 }
 

@@ -3,7 +3,9 @@ import '../Styles/Eligible.css'
 import prize1 from '../Assets/prize1.png'
 import prize2 from '../Assets/prize2.png'
 import prize3 from '../Assets/prize3.png'
-
+import apply_now from '../Assets/apply_now.png'
+import submit from '../Assets/submit.png'
+import { Link } from 'react-router-dom'
 function Eligible() {
   return (
     <div id='eligible_bg' className='eligible_bg'>
@@ -16,18 +18,22 @@ function Eligible() {
         <p className='heading'>ENGLISH WRITING COMPETITION<span className='linetwo'> Rules & Eligibility</span></p>
         <ul className='ul_class1'>
           <li className='list'>Word limit for the submission: 1000 - 2000 words </li>
-          <li className='list'>Authors must be between 16 to 18 years of<br/> age as of final date of submission. </li>
+          <li className='list'>Authors must be between 16 to 18 years of<br /> age as of final date of submission. </li>
           <li className='list'>Only unpublished works will be considered </li>
           <li className='list'>Plagiarized entries will be disqualified.</li>
-          <li className='list'>A Government of India issued identity document<br/> must be scanned and uploaded as identity proof<br/> by contestants. The competition is open only to <br/>Indian residents/citizens. </li>
+          <li className='list'>A Government of India issued identity document<br /> must be scanned and uploaded as identity proof<br /> by contestants. The competition is open only to <br />Indian residents/citizens. </li>
         </ul>
         <ul className='ul_class1'>
           <li className='list'>All entries must be original and in English </li>
-          <li className='list'>No identifying markers allowed in the document<br/> including the document name</li>
+          <li className='list'>No identifying markers allowed in the document<br /> including the document name</li>
           <li className='list'>Only one submission per person is allowed</li>
           <li className='list'>The decision of the jury is final and cannot be<br /> challenged.</li>
           <li className='list'>Entries should be typed, double-spaced,<br /> Times New Roman font (12pt), and to be submitted<br />in DOCX, DOC or PDF format</li>
         </ul>
+        <div className='admissions_box'>
+          <img className='admissions_image' src={submit} />
+          <Link target='_blank' to='https://snuadmissions.com/'><img className='admissions_image' src={apply_now} /></Link>
+        </div>
       </div>
     </div>
   )

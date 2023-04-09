@@ -85,7 +85,10 @@
     }
 
     .description_container{
-        padding: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        padding-top: 0px;
         border-radius: 0px;
         background-color: rgba(239, 238, 255, 1);
     }
@@ -133,7 +136,10 @@
     }
 
     .description_container{
-        padding: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        padding-top: 30px;
         border-radius: 0px;
         background-color: rgba(239, 238, 255, 1);
     }

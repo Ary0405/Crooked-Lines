@@ -4,11 +4,18 @@ import Home_image from '../Assets/home_image.png'
 import Home_circle_two from '../Assets/home_circle_two.png'
 import Apply_button from '../Assets/apply_button.png'
 import { useNavigate } from "react-router-dom";
+import { UserAuth } from "../Context/AuthContext";
+
 
 function Home() {
+    const { user } = UserAuth();
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate('/submission')
+        if (user) {
+            navigate('/submission')
+        } else {
+            navigate('/signin')
+        }
     }
     return (
         <div id='home_main_container' className='home_main_container'>
