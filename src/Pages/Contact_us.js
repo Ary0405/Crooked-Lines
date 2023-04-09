@@ -12,7 +12,6 @@ function Contact_us() {
         emailjs.sendForm('service_3751zek', 'template_v170v12', form.current, 'R8PaA9v1My6UlqV8L')
             .then((result) => {
                 alert('Email sent successfully')
-                console.log(result.text);
             }, (error) => {
                 console.log(error.text);
             });

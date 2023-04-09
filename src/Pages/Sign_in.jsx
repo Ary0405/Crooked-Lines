@@ -34,21 +34,15 @@ function Sign_in() {
           submission: 0,
         };
         let newUser = await getDoc(doc(db, "users", data.user.email));
-        console.log(newUser.exists());
 
-        if(newUser.exists()){
-          console.log("User logged in");
-        }else{
+        if(!newUser.exists())
           await setDoc(doc(db, "users", data.user.email), document);
-          console.log("User registered");
-        }
 
         dispatch(actionCreators.loginUser(true));
         setLoading(false);
         navigate("/");
       })
       .catch((error) => {
-        console.log(error);
         setLoading(false);
       });
   };
@@ -72,7 +66,6 @@ function Sign_in() {
   function onSignup() {
     if (phone.length < 10) {
       alert("Please enter a valid phone number");
-      console.log(phone.length);
       toast.error("Please enter a valid phone number");
     } else {
       onCaptchaVerify();
@@ -87,7 +80,7 @@ function Sign_in() {
         .catch((error) => {
           console.log(error);
         });
-      console.log(phone);
+      
     }
   }
 

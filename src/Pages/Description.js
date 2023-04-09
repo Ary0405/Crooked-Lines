@@ -1,6 +1,5 @@
 import React from 'react'
 import '../Styles/Description.css'
-import Home_image_two from '../Assets/home_image_two.png'
 import Home_circle_one from '../Assets/home_circle_one.png'
 import About_us_section from '../Assets/about_us_section.png'
 import { Link } from 'react-router-dom'
