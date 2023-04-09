@@ -4,13 +4,14 @@ import location from '../Assets/location.png';
 import mail from '../Assets/mail.png';
 import logo from '../Assets/logo.png'
 import '../Styles/footer.css';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 
 function Footer() {
+    const navigate = useNavigate();
     const handleClick = (scrollToId) => {
         if(!document.getElementById(scrollToId)){
-            window.location.href = "/";
+            navigate('/');
         }else{
             document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth" });
         } 

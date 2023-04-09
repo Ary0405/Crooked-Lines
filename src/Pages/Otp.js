@@ -1,8 +1,6 @@
 import React from 'react'
-import PhoneInput from 'react-phone-input-2';
 import { useSelector , useDispatch } from 'react-redux';
-import { auth, provider } from '../firebase'
-import { toast, Toaster } from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 import { actionCreators } from '../State';
 import OtpInput from 'otp-input-react';
 import { useNavigate } from "react-router-dom";
@@ -10,6 +8,7 @@ import {
     getFirestore,
     setDoc,
     doc,
+    getDoc,
 } from "firebase/firestore";
 import '../Styles/Otp.css'
 const db = getFirestore();
@@ -17,20 +16,21 @@ const db = getFirestore();
 function Otp() {
     const dispatch = useDispatch();
     const [otp, setOtp] = React.useState('');
-    const [phone, setPhone] = React.useState('');
     const phoneNumber = useSelector(state => state.phone);
     const navigate = useNavigate();
     function onOTPVerify() {
         window.confirmationResult.confirm(otp).then(async (res) => {
-            console.log(res.user['phoneNumber']);
             toast.success('OTP verified');
+            localStorage.setItem('user', res.user['phoneNumber']);
             let document = {
                 "phone": res.user['phoneNumber'],
                 "submission": 0,
             }
-            await setDoc(doc(db, "users", res.user['phoneNumber']), document);
+            let newUser = await getDoc(doc(db, "users", res.user['phoneNumber']));
+            if (!newUser.exists()) {
+                await setDoc(doc(db, "users", res.user['phoneNumber']), document);
+            }    
             dispatch(actionCreators.setPhoneNumbers(res.user['phoneNumber']));
-            console.log("User registered")
             navigate('/');
         })
     }

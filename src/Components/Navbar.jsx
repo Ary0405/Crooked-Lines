@@ -1,14 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import Hamburger from "../Assets/hamburg.png";
 import { UserAuth } from "../Context/AuthContext";
+
 import "../Styles/Navbar.css";
 
 function Navbar() {
   const { user, logout } = UserAuth();
+  const navigate = useNavigate();
   const handleClick = (scrollToId) => {
     if(!document.getElementById(scrollToId)){
-      window.location.href = "/";
+      navigate("/");
     }else{
       document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth" });
     } 

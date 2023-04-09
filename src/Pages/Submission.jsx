@@ -6,15 +6,14 @@ import { storage } from "../firebase";
 import { UserAuth } from "../Context/AuthContext";
 import { TailSpin } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
+import Exclaimation from "../Assets/exclaimation.png";
 import {
   getFirestore,
   collection,
   getDocs,
   doc,
   updateDoc,
-  setDoc,
 } from "firebase/firestore";
-import Exclaimation from "../Assets/exclaimation.png";
 const db = getFirestore();
 
 function Submission() {
@@ -82,10 +81,10 @@ function Submission() {
       school_city === ""
     ) {
 
-      if(name === '') alert('Please enter your name');
+      if(name === '') alert('Please enter your name proper');
       else if(email === '') alert('Please enter your email');
       else if(dob === '') alert('Please enter your date of birth');
-      else if(number === '') alert('Please enter your phone number');
+      else if(number === '') alert('Enter a valid phone number');
       else if(school === '') alert('Please enter your school name');
       else if(address === '') alert('Please enter your address');
       else if(state === '') alert('Please enter your state');
@@ -95,7 +94,6 @@ function Submission() {
       else alert('Please enter all the fields');
 
     } else {
-      console.log(dob);
       if (!aadhar || !submission) {
         alert("Please upload files");
       } else {
@@ -143,7 +141,6 @@ function Submission() {
                 };
                 await updateDoc(userRef, document);
                 urls.push(url);
-                console.log(url);
               }
             );
           }
@@ -165,7 +162,6 @@ function Submission() {
                   submission_url: url,
                 };
                 await updateDoc(userRef, document);
-                console.log(url);
                 alert("Form submitted successfully");
                 setLoading(false);
                 window.location.reload();
@@ -176,9 +172,7 @@ function Submission() {
         Promise.all(urls).then((downloadUrls) => {
           console.log(downloadUrls);
         });
-        console.log(name);
       }
-      // navigate("/submission-complete");
     }
   };
   return (
@@ -201,7 +195,6 @@ function Submission() {
             wrapperStyle={{
               display: "grid",
               placeItems: "center",
-            //   height: "100vh",
             }}
             wrapperClass=""
             visible={true}
@@ -226,7 +219,7 @@ function Submission() {
                   <input
                     value={email}
                     className="submission_input"
-                    type={"text"}
+                    type={"email"}
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 ) : (
@@ -388,7 +381,7 @@ function Submission() {
                 <input
                   value={email}
                   className="submission_input"
-                  type={"text"}
+                  type={"email"}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               ) : (
