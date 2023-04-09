@@ -8,6 +8,7 @@
     background-color: rgba(239, 238, 255, 1);
     padding: 50px 100px 50px 100px;
     font-family: 'Roboto', sans-serif;
+    line-height: 1.5em;
 }
 .about_competition {
     font-family: 'Fraunces', serif;
