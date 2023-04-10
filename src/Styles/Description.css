@@ -171,3 +171,12 @@
         color: #000000;
     }
 }
+
+@media (min-width:1700px) {
+    .description_main_container {
+        padding-left: 350px;
+    }
+    .description_container {
+        padding-right: 350px;
+    }
+}
