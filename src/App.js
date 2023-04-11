@@ -9,11 +9,12 @@ import ProtectedRoute from './Components/ProtectedRoute';
 import SubmissionComplete from './Pages/Submission_Complete';
 import SignIn from './Pages/Sign_in';
 import About from './Pages/About';
+import BlogHero from './Pages/Blogs/BlogHero';
 
 function App() {
   return (
     <div className="App">
-      <AuthContextProvider>
+      {/* <AuthContextProvider>
         <AnimatePresence mode='wait'>
           <BrowserRouter>
             <Routes>
@@ -26,7 +27,8 @@ function App() {
             </Routes>
           </BrowserRouter>
         </AnimatePresence>
-      </AuthContextProvider>
+      </AuthContextProvider> */}
+      <BlogHero />
     </div>
   );
 }
