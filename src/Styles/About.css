@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&display=swap');
 
 .about_container{
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     background-color: rgba(239, 238, 255, 1);
     padding: 50px 100px 50px 100px;
     font-family: 'Roboto', sans-serif;
     line-height: 1.5em;
+    text-align: justify;
 }
 .about_competition {
     font-family: 'Fraunces', serif;
@@ -73,5 +72,11 @@
     }
     .about_container{
         padding: 50px;
+    }
+}
+
+@media (min-width:1700px){
+    .about_container{
+        padding: 50px 350px 50px 300px;
     }
 }
