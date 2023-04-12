@@ -3,8 +3,7 @@ import '../Styles/Eligible.css'
 import prize1 from '../Assets/prize1.png'
 import prize2 from '../Assets/prize2.png'
 import prize3 from '../Assets/prize3.png'
-import apply_now from '../Assets/apply_now.png'
-import submit from '../Assets/submit.png'
+
 import { Link } from 'react-router-dom'
 function Eligible() {
   return (
@@ -15,7 +14,7 @@ function Eligible() {
         <img className='prizes' src={prize3} alt='prize3' />
       </div>
       <div className='box'>
-        <p className='heading'>ENGLISH WRITING COMPETITION<span className='linetwo'> Rules & Eligibility</span></p>
+        <p className='heading'>CONTEST RULES AND ELIGIBILITY</p>
         <ul className='ul_class1'>
           <li className='list'>Word limit for the submission: 1000 - 2000 words </li>
           <li className='list'>Authors must be between 16 to 18 years of<br /> age as of final date of submission. </li>
@@ -30,10 +29,10 @@ function Eligible() {
           <li className='list'>The decision of the jury is final and cannot be<br /> challenged.</li>
           <li className='list'>Entries should be typed, double-spaced,<br /> Times New Roman font (12pt), and to be submitted<br />in DOCX, DOC or PDF format</li>
         </ul>
-        <div className='admissions_box'>
+        {/* <div className='admissions_box'>
           <img alt='admissions' className='admissions_image' src={submit} />
           <Link target='_blank' to='https://snuadmissions.com/'><img alt='' className='admissions_image' src={apply_now} /></Link>
-        </div>
+        </div> */}
       </div>
     </div>
   )

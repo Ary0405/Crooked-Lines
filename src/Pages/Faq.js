@@ -5,7 +5,7 @@ import Accordian from '../Components/Accordian'
 function Faq() {
     const accordionData = [
         {
-            title: 'What is the theme of this competition?',
+            title: 'Does the competition have a theme?',
             content: `This year there is no theme for the contest. All topics are welcome.`
         },
         {
@@ -39,7 +39,7 @@ function Faq() {
                 <img className='faq_image' src={faq} alt=''/>
                 <p className='faq_heading_section_text'>What do you want to know?</p>
             </div>
-            <p className='faq_question'>Do you have questions about This<br /> contest? Check out our FAQ <br />section!</p>
+            <p className='faq_question'>FAQ</p>
             <div className='faq_sections_questions'>
                 {accordionData.map(({ title, content }) => (
                     <Accordian title={title} content={content} />

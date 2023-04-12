@@ -44,7 +44,8 @@
     font-weight: 800;
     padding: 0%;
     white-space: nowrap;
-    text-align: center;
+    text-align: left;
+    margin-left: 40px;
 }
 
 .linetwo {
@@ -52,7 +53,7 @@
     font-style: normal;
     color: #D87F91;
     /*color: linear-gradient(#BC6F9E, #D87F91);*/
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 800;
     white-space: nowrap;
     text-align: center;
@@ -69,13 +70,15 @@ ul {
 .ul_class1 {
     top: 100px;
     margin-left: -10px;
+    padding-left: 3px;
+    padding-bottom: 30px;
 }
 
 .list {
     margin-left: 10px;
     margin-bottom: 8px;
     text-align: left;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
     background: url('../Assets/Star.png') left center no-repeat;
@@ -85,15 +88,16 @@ ul {
 
 .admissions_box {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: ; */
+    justify-content: left;
 }
 .admissions_image {
-    width: 300px;
+    width: 250px;
     height : auto;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 30px;
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+    margin-top: 20px;
+    /* margin-bottom: 30px; */
 }
 
 @media (max-width: 768px) {
