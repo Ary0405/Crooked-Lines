@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Hamburger from "../Assets/hamburg.png";
 import { UserAuth } from "../Context/AuthContext";
 
@@ -9,11 +9,11 @@ function Navbar() {
   const { user, logout } = UserAuth();
   const navigate = useNavigate();
   const handleClick = (scrollToId) => {
-    if(!document.getElementById(scrollToId)){
+    if (!document.getElementById(scrollToId)) {
       navigate("/");
-    }else{
+    } else {
       document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth" });
-    } 
+    }
   };
   const [showNavbar, setShowNavbar] = useState(false);
 
@@ -35,42 +35,42 @@ function Navbar() {
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul className="list_nav">
             <li>
-              <p style={{"cursor" : "pointer"}} onClick={() => handleClick("home_main_container")}>Home</p>
+              <p style={{ "cursor": "pointer" }} onClick={() => handleClick("home_main_container")}>Home</p>
             </li>
             <li>
-              <p style={{"cursor" : "pointer"}} onClick={() => handleClick("description_main_container")}>
-                About
-              </p>
+              <p style={{ "cursor": "pointer" }}onClick={() => {navigate("/about")}}>About</p>
             </li>
             <li>
-              <p style={{"cursor" : "pointer"}} onClick={() => handleClick("eligible_bg")}>Eligibility</p>
+              <p style={{ "cursor": "pointer" }} onClick={() => handleClick("eligible_bg")}>Eligibility</p>
             </li>
             <li>
-              <p style={{"cursor" : "pointer"}} onClick={() => handleClick("timeline_main")}>Timeline</p>
+              <p style={{ "cursor": "pointer" }} onClick={() => handleClick("timeline_main")}>Timeline</p>
             </li>
             <li>
-              <p style={{"cursor" : "pointer"}} onClick={() => handleClick("main_container")}>Contact</p>
+              <p style={{ "cursor": "pointer" }} onClick={() => handleClick("main_container")}>Contact</p>
             </li>
             <li>
-              <p style={{"cursor" : "pointer"}} onClick={() => handleClick("faq_main_container")}>FAQ</p>
+              <p style={{ "cursor": "pointer" }} onClick={() => handleClick("faq_main_container")}>FAQ</p>
             </li>
             <li>
-              {user ? <p style={{"cursor" : "pointer"}} onClick={() => logout()}>Log Out</p> : null}
+              {user ? <p style={{ "cursor": "pointer" }} onClick={() => logout()}>Log Out</p> : null}
             </li>
             <li>
               {user ? (
                 <Link
+                  className="link"
                   style={{ textDecoration: "none", cursor: "pointer" }}
                   to="/submission"
                 >
-                  <p style={{"cursor" : "pointer"}} className="login">Apply</p>
+                  <p style={{ "cursor": "pointer" }} className="login">Apply</p>
                 </Link>
               ) : (
                 <Link
+                  className="link"
                   style={{ textDecoration: "none", cursor: "pointer" }}
                   to="/signin"
                 >
-                  <p style={{"cursor" : "pointer"}} className="login">Login</p>
+                  <p style={{ "cursor": "pointer" }} className="login">Login</p>
                 </Link>
               )}
             </li>
