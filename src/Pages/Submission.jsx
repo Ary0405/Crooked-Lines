@@ -117,7 +117,6 @@ function Submission() {
           submissionRef,
           submission
         );
-        // var aadharUrl;
         let userRef;
         if (emailField) {
           userRef = doc(db, "users", user.email);

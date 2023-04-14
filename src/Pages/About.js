@@ -4,12 +4,15 @@ import shivani from '../Assets/shivani.jpg';
 import trisha from '../Assets/Trisha De Niyogi.jpg';
 import Footer from './Footer';
 import Navbar from '../Components/Navbar';
+import CircleImg from '../Assets/home_circle_two.png';
+import Home_circle_one from '../Assets/home_circle_one.png'
 
 function About() {
     return (
         <>
             <Navbar />
             <div className='about_container'>
+                <img className='about_circle_one' src={CircleImg} alt='' />
                 <div className='details_container'>
                     <p className='about_heading'>About the <span className='about_competition'>Competition</span></p>
                     <p className='about_content'>
@@ -49,6 +52,7 @@ function About() {
                     </div>
 
                 </div>
+
                 <div className='details_container'>
                     <p className='about_heading'>The <span className='about_competition'>Department</span></p>
                     <p className='about_content'>
@@ -69,6 +73,7 @@ function About() {
                         Now in its 10th year of publication, The Freewheeler is the student-run annual literary magazine of the Department of English. Not only does it provide an exciting opportunity for students to explore various forms of creative writing, it also serves as a platform for budding editors and designers to hone their skills. Submissions undergo rigorous review and every issue is crafted with a great deal of emphasis on quality and originality. Back issues of The Freewheeler can be found <a href='https://snu.edu.in/news/freewheeler' rel='noreferrer' target='_blank'>here.</a>
                     </p>
                 </div>
+            <img className='about_circle_two' src={Home_circle_one} alt=''/>
                 <div className='details_container'>
                     <p className='about_heading'>About the <span className='about_competition'>Logo</span></p>
                     <p className='about_content'>

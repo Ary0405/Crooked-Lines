@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Main from './Pages/Main';
 import { AnimatePresence } from "framer-motion";
