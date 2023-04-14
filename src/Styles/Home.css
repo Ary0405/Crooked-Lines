@@ -54,6 +54,7 @@
 .apply_button {
     z-index: 999;
     width: 150px;
+    cursor: pointer;
 }
 
 @media (min-width:240px) and (max-width: 768px) {
