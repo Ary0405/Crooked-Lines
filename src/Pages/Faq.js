@@ -14,7 +14,7 @@ function Faq() {
         },
         {
             title: 'Is there a submission fee?',
-            content: `There is no submission fee for this year’s contest. However, only one submission per individual is allowed.`
+            content: `There is no submission fee for this year's contest. However, only one submission per individual is allowed.`
         },
         {
             title: 'Can I submit poetry?',
@@ -31,6 +31,10 @@ function Faq() {
         {
             title: 'Do I need to be an Indian citizen to enter the competition?',
             content: `This year we require all entrants to submit a Government of India approved identity proof.`
+        },
+        {
+            title: 'How to register for the competition?',
+            content:  `To begin the application process, please click on the Login button located in the navigation bar, and sign up using either your email address or phone number. Once you have successfully logged in, the "Enter Now" button will transform into "Apply Now". Click on the "Apply Now" button and fill out the necessary details before submitting your work.`
         },
     ];
     return (
