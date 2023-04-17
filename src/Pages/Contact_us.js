@@ -21,7 +21,7 @@ function ContactUs() {
             <div id='main_container' className='main_container'>
                 <img className='bg_1' src={background} alt=''/>
                 <img className='bg_2' src={background_two} alt=''/>
-                <p className='contact_us_heading'><span className='questions'>Got questions?</span></p>
+                <p className='contact_us_heading'><span className='questions'>Got Questions?</span></p>
                 <p className='contact_us_details'>Fill out the form if you have any queries related to the competition</p>
                 <div className='form_group'>
                     <form ref={form} className='submit_form' onSubmit={sendEmail}>

@@ -14,7 +14,8 @@ function Eligible() {
         <img className='prizes' src={prize3} alt='prize3' />
       </div>
       <div className='box'>
-        <p className='heading'>CONTEST RULES AND ELIGIBILITY</p>
+        <p className='heading'>CONTEST RULES & ELIGIBILITY </p>
+        {/* <span className='linetwo'>RULES & ELIGIBILITY</span> */}
         <ul className='ul_class1'>
           <li className='list'>Word limit for the submission: 1000 - 2000 words </li>
           <li className='list'>Authors must be between 16 to 18 years of<br /> age as of final date of submission. </li>
