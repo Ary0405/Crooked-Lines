@@ -1,7 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import {
     createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
     signOut,
     onAuthStateChanged,
 } from 'firebase/auth';
@@ -15,15 +14,6 @@ export const AuthContextProvider = ({ children }) => {
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
     };
-
-    const signIn = (email, password) => {
-        if (email === 'hr@uhptech.com') {
-            console.log("login successful")
-            return signInWithEmailAndPassword(auth, email, password);
-        }
-        else
-            console.log("wrong HR creds");
-    }
 
     const logout = () => {
         window.location.reload();
@@ -40,7 +30,7 @@ export const AuthContextProvider = ({ children }) => {
     }, []);
 
     return (
-        <UserContext.Provider value={{ createUser, user, logout, signIn }}>
+        <UserContext.Provider value={{ createUser, user, logout }}>
             {children}
         </UserContext.Provider>
     );

@@ -5,7 +5,7 @@
     display: flex;
     background-color: rgba(239, 238, 255, 1);
     align-items: center;
-    padding-left: 40px;
+    padding-left: 140px;
 }
 
 .description_image_circle {
@@ -30,6 +30,7 @@
     background-color: white;
     border-radius: 30px 0 0 0px;
     padding: 10px 120px 40px 60px;
+    text-align: justify;
 }
 
 .description_question {
@@ -190,5 +191,8 @@
     }
     .description_container {
         padding-right: 350px;
+    }
+    .description_image_circle{
+        width: 200px;
     }
 }

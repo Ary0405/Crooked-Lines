@@ -4,7 +4,6 @@ import prize1 from '../Assets/prize1.png'
 import prize2 from '../Assets/prize2.png'
 import prize3 from '../Assets/prize3.png'
 
-import { Link } from 'react-router-dom'
 function Eligible() {
   return (
     <div id='eligible_bg' className='eligible_bg'>
@@ -30,10 +29,7 @@ function Eligible() {
           <li className='list'>The decision of the jury is final and cannot be<br /> challenged.</li>
           <li className='list'>Entries should be typed, double-spaced,<br /> Times New Roman font (12pt), and to be submitted<br />in DOCX, DOC or PDF format</li>
         </ul>
-        {/* <div className='admissions_box'>
-          <img alt='admissions' className='admissions_image' src={submit} />
-          <Link target='_blank' to='https://snuadmissions.com/'><img alt='' className='admissions_image' src={apply_now} /></Link>
-        </div> */}
+        
       </div>
     </div>
   )

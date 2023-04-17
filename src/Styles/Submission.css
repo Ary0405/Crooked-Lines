@@ -6,7 +6,6 @@
 .submission_main_container {
     display: flex;
     justify-content: space-evenly;
-    /* align-items: center; */
     overflow: hidden;
 }
 

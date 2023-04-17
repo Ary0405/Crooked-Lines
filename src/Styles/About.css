@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&display=swap');
 
 .about_container{
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     background-color: rgba(239, 238, 255, 1);
     padding: 50px 100px 50px 100px;
     font-family: 'Roboto', sans-serif;
     line-height: 1.5em;
+    text-align: justify;
 }
+
+.about_circle_one{
+    position: absolute;
+    width: 502px;
+    height: 502px;
+    left: 0px;
+}
+
+.about_circle_two{
+    width: 200px;
+    position: fixed;
+    right: 0;
+}
+
 .about_competition {
     font-family: 'Fraunces', serif;
     font-weight: bold;
@@ -73,5 +86,20 @@
     }
     .about_container{
         padding: 50px;
+    }
+    .about_circle_one{
+        display: none;
+    }
+    .about_circle_two{
+        display: none;
+    }
+}
+
+@media (min-width:1700px){
+    .about_container{
+        padding: 50px 350px 50px 300px;
+    }
+    .about_circle_two{
+        width: 262px;
     }
 }

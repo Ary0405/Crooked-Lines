@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,300&display=swap');
 
-/* Desktop */
 
 .bg_1 {
     position: absolute;
-    /* width: 35%; */
     right: 30px;
     z-index: -1;
 }
@@ -85,7 +83,6 @@
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    /* z-index: 100; */
 }
 
 .submission_input_contact {

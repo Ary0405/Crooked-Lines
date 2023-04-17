@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Hamburger from "../Assets/hamburg.png";
 import { UserAuth } from "../Context/AuthContext";
-
 import "../Styles/Navbar.css";
 
 function Navbar() {

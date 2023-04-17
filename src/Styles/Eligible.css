@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,300&display=swap');
-/* Desktop */
 
 .eligible_bg {
     background-color: white;
@@ -63,7 +62,6 @@
     font-family: 'Fraunces', serif;
     /* font-style: normal; */
     color: #D87F91;
-    /*color: linear-gradient(#BC6F9E, #D87F91);*/
     font-size: 25px;
     font-weight: 800;
     white-space: nowrap;
@@ -74,7 +72,6 @@
 ul {
     margin-right: 10px;
     margin-left: 0px;
-    /* list-style-image: url('../Assets/Star.png'); */
     list-style: none;
     display: inline-block;
 }
@@ -106,10 +103,7 @@ ul {
 .admissions_image {
     width: 250px;
     height : auto;
-    /* margin-left: 20px; */
-    /* margin-right: 20px; */
     margin-top: 20px;
-    /* margin-bottom: 30px; */
 }
 
 @media (max-width: 768px) {
