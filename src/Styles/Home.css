@@ -33,6 +33,7 @@
 .home_image {
     width: 600px;
     height: auto;
+    padding-left: 2%;
 }
 
 .home_content {
@@ -129,4 +130,18 @@
     .apply_button {
         margin-bottom: 40px;
     }
+}
+
+.shortStoryComp {
+    margin: 13px 0px;
+}
+
+.subHeading {
+    margin-top: 14px 0px;
+    padding: 0px 0px;
+}
+
+.para{
+    margin: 0px 0px;
+    padding: 0px 0px;
 }

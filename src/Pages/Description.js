@@ -13,7 +13,8 @@ function Description() {
             </div>
             <img className='description_image_circle' src={Home_circle_one} alt=''/>
             <div className='description_container'>
-                <p className='description_question'>ABOUT THE ORGANIZERS</p>
+                <p className='description_question'>ABOUT THE ORGANIZERS</p> 
+                {/* <span className='organizers'>ORGANIZERS</span> */}
                 <p className='description_content'>The Department of English at Shiv Nadar Institute of Eminence came into existence in July 2011, when the university was founded. Our faculty is highly regarded with PhDs from eminent universities across the world.</p>
                 <p className='description_content'>We combine intellectual rigor with continuous innovation inside and outside the classroom offering a wide range of undergraduate and graduate courses.</p>
                 <p className='description_content'>In addition to critical thinking and interpretation, we also emphasize creative writing in both our BA and MA degrees. To find out more <Link to='about' style={{"zIndex" : "100"}}> click here </Link> </p>
