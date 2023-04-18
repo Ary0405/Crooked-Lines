@@ -18,7 +18,7 @@
 }
 
 .about_circle_two{
-    width: 200px;
+    width: 105px;
     position: fixed;
     right: 0;
 }
@@ -49,7 +49,7 @@
 }
 .jury_main_container p{
     padding: 30px;
-    max-width: 1050px;
+    max-width: 900px;
 }
 
 .jury_img{
@@ -101,5 +101,8 @@
     }
     .about_circle_two{
         width: 262px;
+    }
+    .jury_main_container p{
+        max-width: 1050px;
     }
 }
