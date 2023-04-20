@@ -19,9 +19,9 @@ const db = getFirestore();
 
 function Submission() {
   const id = uniqid("crookedlines");
-  const [registration,] = useState(id);
+  const [registration] = useState(id);
   const userRef = collection(db, "users");
-  const [, setAadharFileName] = useState("");
+  const [aadharFileName, setAadharFileName] = useState("");
   const [submissionFileName, setSubmissionFileName] = useState("");
   const [name, setName] = useState("");
   const [phoneField, setPhoneField] = useState(false);
@@ -72,7 +72,7 @@ function Submission() {
         }
       });
     });
-  },[user.email, user.phoneNumber, userRef, email, number, navigate]);
+  }, [user.email, user.phoneNumber, userRef, email, number, navigate]);
   const handleSubmit = async () => {
     let urls = [];
     if (
@@ -87,7 +87,7 @@ function Submission() {
       school_state === "" ||
       school_city === ""
     ) {
-      if (name === "") alert("Please enter your name proper");
+      if (name === "") alert("Please enter your name");
       else if (email === "") alert("Please enter your email");
       else if (dob === "") alert("Please enter your date of birth");
       else if (number === "") alert("Enter a valid phone number");
@@ -110,13 +110,17 @@ function Submission() {
         alert("Please upload files");
       } else {
         setLoading(true);
-        const aadharRef = ref(storage, `/aadhar/${aadhar.name}`);
+        const aadharRef = ref(storage, `/aadhar/${aadharFileName.name}`);
         const submissionRef = ref(storage, `/submission/${submission.name}`);
-        const uploadAadharTask = uploadBytesResumable(aadharRef, aadhar);
+        const uploadAadharTask = uploadBytesResumable(
+          aadharRef,
+          aadharFileName
+        );
         const uploadSubmissionTask = uploadBytesResumable(
           submissionRef,
           submission
         );
+        let aadharUrl;
         let userRef;
         if (emailField) {
           userRef = doc(db, "users", user.email);
@@ -135,29 +139,25 @@ function Submission() {
           async () => {
             await getDownloadURL(uploadAadharTask.snapshot.ref).then(
               async (url) => {
-                var aadharUrl = url;
+                aadharUrl = url;
                 let document = {
-                  registrationNumber: registration,
                   email: email,
                   name: name,
                   dob: dob,
                   number: number,
                   school: school,
                   address: address,
-                  aadhar_url: aadharUrl,
+                  aadhar_url: url,
                   submission: 1,
-                  state: state,
-                  city: city,
-                  school_state: school_state,
-                  school_city: school_city,
                 };
                 await updateDoc(userRef, document);
                 urls.push(url);
+                console.log(url);
               }
             );
           }
         );
-
+        console.log("Checking here cmmcmcmcm");
         uploadSubmissionTask.on(
           "state_changed",
           (snapshot) => {
@@ -171,8 +171,21 @@ function Submission() {
             await getDownloadURL(uploadSubmissionTask.snapshot.ref).then(
               async (url) => {
                 let document = {
+                  registrationNumber: registration,
+                  email: email,
+                  name: name,
+                  dob: dob,
+                  number: number,
+                  school: school,
+                  address: address,
                   submission_url: url,
+                  submission: 1,
+                  state: state,
+                  city: city,
+                  school_state: school_state,
+                  school_city: school_city,
                 };
+                console.log("Checking here 2");
                 await updateDoc(userRef, document);
                 alert("Form submitted successfully");
                 setLoading(false);
@@ -282,7 +295,10 @@ function Submission() {
                     className="custom-file-input"
                     type={"file"}
                     accept=".pdf,image/*"
-                    onChange={(e) => setAadhar(e.target.files[0])}
+                    onChange={(e) => {
+                      setAadhar(e.target.files[0]);
+                      setAadharFileName(e.target.files[0].name);
+                    }}
                   />
                   <p className="file_name">Choose File</p>
                 </div>
@@ -511,9 +527,7 @@ function Submission() {
                   />
                   <div className="warning_box">
                     <img className="exclaimation" src={Exclaimation} alt="" />
-                    <p className="warning_text">
-                      Enter 10 digit phone number
-                    </p>
+                    <p className="warning_text">Enter 10 digit phone number</p>
                   </div>
                 </>
               ) : (
