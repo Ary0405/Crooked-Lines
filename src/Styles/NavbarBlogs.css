@@ -1,0 +1,26 @@
+.navbar_blogs_main_container {
+    display: flex;
+    padding-top: 40px;
+    padding-left: 40px;
+    align-items: center;
+}
+.navbar_blogs_elements {
+    display: flex;
+}
+.navbar_blogs_heading {
+    font-family: 'Raleway', serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 19px;
+    text-align: left;
+    color: #000000;
+}
+.navbar_blogs_elements > p {
+    font-family: 'Raleway', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: left;
+    color: #000000;
+    margin: 0px 10px 0px 20px;
+}

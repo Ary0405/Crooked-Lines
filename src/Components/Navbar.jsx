@@ -11,7 +11,9 @@ function Navbar() {
     if (!document.getElementById(scrollToId)) {
       navigate("/");
     } else {
-      document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById(scrollToId)
+        .scrollIntoView({ behavior: "smooth" });
     }
   };
   const [showNavbar, setShowNavbar] = useState(false);
@@ -29,30 +31,76 @@ function Navbar() {
           </Link>
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
-          <img className="hamburger" src={Hamburger} alt=''></img>
+          <img className="hamburger" src={Hamburger} alt=""></img>
         </div>
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul className="list_nav">
             <li>
-              <p style={{ "cursor": "pointer" }} onClick={() => handleClick("home_main_container")}>Home</p>
+              <p
+                style={{ cursor: "pointer" }}
+                onClick={() => handleClick("home_main_container")}
+              >
+                Home
+              </p>
             </li>
             <li>
-              <p style={{ "cursor": "pointer" }}onClick={() => {navigate("/about")}}>About</p>
+              <p
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  navigate("/about");
+                }}
+              >
+                About
+              </p>
             </li>
             <li>
-              <p style={{ "cursor": "pointer" }} onClick={() => handleClick("eligible_bg")}>Eligibility</p>
+              <p
+                style={{ cursor: "pointer" }}
+                onClick={() => handleClick("eligible_bg")}
+              >
+                Eligibility
+              </p>
             </li>
             <li>
-              <p style={{ "cursor": "pointer" }} onClick={() => handleClick("timeline_main")}>Timeline</p>
+              <p
+                style={{ cursor: "pointer" }}
+                onClick={() => handleClick("timeline_main")}
+              >
+                Timeline
+              </p>
             </li>
             <li>
-              <p style={{ "cursor": "pointer" }} onClick={() => handleClick("main_container")}>Contact</p>
+              <p
+                style={{ cursor: "pointer" }}
+                onClick={() => handleClick("main_container")}
+              >
+                Contact
+              </p>
             </li>
             <li>
-              <p style={{ "cursor": "pointer" }} onClick={() => handleClick("faq_main_container")}>FAQ</p>
+              <p
+                style={{ cursor: "pointer" }}
+                onClick={() => handleClick("faq_main_container")}
+              >
+                FAQ
+              </p>
             </li>
             <li>
-              {user ? <p style={{ "cursor": "pointer" }} onClick={() => logout()}>Log Out</p> : null}
+              <p
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  navigate("/blogs");
+                }}
+              >
+                Blogs
+              </p>
+            </li>
+            <li>
+              {user ? (
+                <p style={{ cursor: "pointer" }} onClick={() => logout()}>
+                  Log Out
+                </p>
+              ) : null}
             </li>
             <li>
               {user ? (
@@ -61,7 +109,9 @@ function Navbar() {
                   style={{ textDecoration: "none", cursor: "pointer" }}
                   to="/submission"
                 >
-                  <p style={{ "cursor": "pointer" }} className="login">Apply</p>
+                  <p style={{ cursor: "pointer" }} className="login">
+                    Apply
+                  </p>
                 </Link>
               ) : (
                 <Link
@@ -69,7 +119,9 @@ function Navbar() {
                   style={{ textDecoration: "none", cursor: "pointer" }}
                   to="/signin"
                 >
-                  <p style={{ "cursor": "pointer" }} className="login">Login</p>
+                  <p style={{ cursor: "pointer" }} className="login">
+                    Login
+                  </p>
                 </Link>
               )}
             </li>
