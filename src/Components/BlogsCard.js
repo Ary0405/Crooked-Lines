@@ -1,11 +1,13 @@
 import React from 'react'
 import '../Styles/BlogsCard.css'
-function BlogsCard() {
+import { useNavigate } from 'react-router-dom'
+function BlogsCard({title , description , id , writer}) {
+    const navigate = useNavigate();
     return (
-        <div className='blogs_card_main_container'>
-            <p className='blogs_card_heading'>Flowers Of Drivel</p>
-            <p className='blogs_card_writer'>By: <span>Shivam Gupta</span></p>
-            <p className='blogs_card_description'>Clare Bucknell’s The Treasuries examines how poetry anthologies have shaped national identity—and preserved some poems better left forgotten. Clare Bucknell’s The Treasuries examines how poetry anthologies have shaped national identity—and preserved some poems better left forgotten. Clare Bucknell’s The Treasuries examines how poetry anthologies have shaped national identity—and preserved some poems better left forgotten. Clare Bucknell’s The Treasuries examines how poetry anthologies have shaped national identity—and preserved some poems better left forgotten.</p>
+        <div onClick={() => {navigate(`/content/${id}`)}} className='blogs_card_main_container'>
+            <p className='blogs_card_heading'>{title}</p>
+            <p className='blogs_card_writer'>By: <span>{writer}</span></p>
+            <p className='blogs_card_description'>{description}</p>
         </div>
     )
 }

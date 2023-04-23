@@ -9,3 +9,9 @@ export const setPhoneNumbers = (phoneNumbers) => {
         dispatch({ type: 'SET_PHONE_NUMBERS', payload: phoneNumbers });
     }
 };
+
+export const setBlogs = (blogs) => {
+    return (dispatch) => {
+        dispatch({ type: 'SET_BLOGS', payload: blogs });
+    }
+}

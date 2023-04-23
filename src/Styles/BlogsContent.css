@@ -1,0 +1,98 @@
+.blog_content_main_container {
+    background-color: rgba(239, 238, 255, 1);
+    height: 100vh;
+}
+.blog_content_heading {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    text-align: left;
+    color: #000000;
+    padding-left: 130px;
+    padding-top: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.blog_content_writer {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: left;
+    color: grey;
+    padding-left: 130px;
+    margin: 0;
+}
+.blog_content_description {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: left;
+    color: #000000;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+.blog_content {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: left;
+    color: #000000;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .blog_content_main_container {
+        background-color: rgba(239, 238, 255, 1);
+        height: 100%;
+    }
+    .blog_content_heading {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        text-align: left;
+        color: #000000;
+        padding-left: 30px;
+        padding-top: 60px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .blog_content_writer {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        text-align: left;
+        color: grey;
+        padding-left: 30px;
+        margin: 0;
+    }
+    .blog_content_description {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        text-align: left;
+        color: #000000;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .blog_content {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: left;
+        color: #000000;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 0;
+    }
+}

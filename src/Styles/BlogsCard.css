@@ -37,3 +37,12 @@
     padding: 0px 0px 20px 20px;
     margin-bottom: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .blogs_card_main_container {
+        margin: 0px 20px 0px 20px;
+    }
+    .blogs_card_description {
+        padding: 0px 20px 20px 20px;
+    }
+}
