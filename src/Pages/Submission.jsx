@@ -138,7 +138,6 @@ function Submission() {
           async () => {
             await getDownloadURL(uploadAadharTask.snapshot.ref).then(
               async (url) => {
-                aadharUrl = url;
                 let document = {
                   email: email,
                   name: name,

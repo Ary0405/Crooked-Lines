@@ -1,28 +1,33 @@
 {
   "files": {
-    "main.css": "/static/css/main.ddbf999c.css",
-    "main.js": "/static/js/main.ec47d95b.js",
-    "static/media/home_circle_two.png": "/static/media/home_circle_two.67af62820a845b999d57.png",
-    "static/media/sub.png": "/static/media/sub.6a999180dfa9c51a2f1d.png",
-    "static/media/home_circle_one.png": "/static/media/home_circle_one.8b8ff28ed610109c85a1.png",
-    "static/media/home_image_two.png": "/static/media/home_image_two.cb8c6e2e72ee9ff1edba.png",
-    "static/media/home_image.png": "/static/media/home_image.49374b771e53e8601c1a.png",
-    "static/media/contact_us_circle_one.png": "/static/media/contact_us_circle_one.db08a711fedff209a1fe.png",
+    "main.css": "/static/css/main.6d876f1f.css",
+    "main.js": "/static/js/main.a25bbcde.js",
+    "static/media/home_image.png": "/static/media/home_image.0229c65cb097a11e3883.png",
+    "static/media/Trisha De Niyogi.jpg": "/static/media/Trisha De Niyogi.815e6415179fa7ed0248.jpg",
+    "static/media/home_circle_two.png": "/static/media/home_circle_two.b8b8620dc86df8cf457f.png",
+    "static/media/home_circle_one.png": "/static/media/home_circle_one.e18deb3500628b749f75.png",
+    "static/media/sub.png": "/static/media/sub.f46447b225a28864c177.png",
     "static/media/SF-UI.ttf": "/static/media/SF-UI.720ea307ec457c77cb5b.ttf",
-    "static/media/contact_us_circle_two.png": "/static/media/contact_us_circle_two.b070f82f7eefc8753faf.png",
-    "static/media/bg_timeline.png": "/static/media/bg_timeline.1c3419f92fb2a0e7d951.png",
-    "static/media/prize1.png": "/static/media/prize1.0a1fbbe358bdfdb2fe95.png",
+    "static/media/apply_now.png": "/static/media/apply_now.ccbdb76439811904a4c6.png",
+    "static/media/Rajat_Kathuria_Photo.jpg": "/static/media/Rajat_Kathuria_Photo.748ee5b7c5e57a35c883.jpg",
+    "static/media/about_us_section.png": "/static/media/about_us_section.72df8f3748e2db9e8a3a.png",
+    "static/media/contact_us_circle_one.png": "/static/media/contact_us_circle_one.acdf8ca6f1135fe3367a.png",
+    "static/media/contact_us_circle_two.png": "/static/media/contact_us_circle_two.9cf3e358789a033425c5.png",
+    "static/media/bg_timeline.png": "/static/media/bg_timeline.b1edd0900ede5ca82476.png",
     "static/media/disturbia.ttf": "/static/media/disturbia.80d20b3487debd780388.ttf",
     "static/media/Satoshi-Medium.otf": "/static/media/Satoshi-Medium.e9d34f0493a853cf10c1.otf",
     "static/media/Satoshi-Bold.otf": "/static/media/Satoshi-Bold.b5dd7deee13e32689234.otf",
-    "static/media/prize2.png": "/static/media/prize2.b9299cb1bf56d3abf063.png",
-    "static/media/prize3.png": "/static/media/prize3.13fd01960068bd9f81bf.png",
+    "static/media/shivani.jpg": "/static/media/shivani.db37d0c67723eeec8321.jpg",
+    "static/media/prize1.png": "/static/media/prize1.d6c497fc45a9b641bd4c.png",
+    "static/media/prize2.png": "/static/media/prize2.160fbf9a9ed78e4a415e.png",
+    "static/media/prize3.png": "/static/media/prize3.9507a26f1570e64be73a.png",
+    "static/media/apply_button.png": "/static/media/apply_button.f6ec7f1039d7807258d6.png",
     "index.html": "/index.html",
-    "main.ddbf999c.css.map": "/static/css/main.ddbf999c.css.map",
-    "main.ec47d95b.js.map": "/static/js/main.ec47d95b.js.map"
+    "main.6d876f1f.css.map": "/static/css/main.6d876f1f.css.map",
+    "main.a25bbcde.js.map": "/static/js/main.a25bbcde.js.map"
   },
   "entrypoints": [
-    "static/css/main.ddbf999c.css",
-    "static/js/main.ec47d95b.js"
+    "static/css/main.6d876f1f.css",
+    "static/js/main.a25bbcde.js"
   ]
 }
