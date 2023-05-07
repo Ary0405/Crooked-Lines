@@ -9,6 +9,7 @@ import SubmissionComplete from './Pages/Submission_Complete';
 import SignIn from './Pages/Sign_in';
 import About from './Pages/About';
 import Blogs from './Pages/Blogs';
+import SpotLightContent from './Pages/SpotLightContent';
 import BlogContent from './Pages/BlogContent';
 import { useEffect } from 'react';
 
@@ -30,6 +31,7 @@ function App() {
               <Route exact path='/submission-complete' element={<ProtectedRoute><SubmissionComplete /></ProtectedRoute>} />
               <Route exact path='/blogs' element={<Blogs />} />
               <Route exact path='/content/:id' element={<BlogContent />} />
+              <Route exact path='/spotlight/:id' element={<SpotLightContent/>} />
             </Routes>
           </BrowserRouter>
         </AnimatePresence>

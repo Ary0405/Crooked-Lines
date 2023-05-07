@@ -19,8 +19,8 @@ const db = getFirestore();
 
 function Submission() {
   const id = uniqid("crookedlines");
-  const [registration] = useState(id);
   const userRef = collection(db, "users");
+  const [registration] = useState(id);
   const [aadharFileName, setAadharFileName] = useState("");
   const [submissionFileName, setSubmissionFileName] = useState("");
   const [name, setName] = useState("");
@@ -110,17 +110,16 @@ function Submission() {
         alert("Please upload files");
       } else {
         setLoading(true);
-        const aadharRef = ref(storage, `/aadhar/${aadharFileName.name}`);
+        const aadharRef = ref(storage, `/aadhar/${aadhar.name}`);
         const submissionRef = ref(storage, `/submission/${submission.name}`);
         const uploadAadharTask = uploadBytesResumable(
           aadharRef,
-          aadharFileName
+          aadhar
         );
         const uploadSubmissionTask = uploadBytesResumable(
           submissionRef,
           submission
         );
-        let aadharUrl;
         let userRef;
         if (emailField) {
           userRef = doc(db, "users", user.email);
@@ -139,7 +138,6 @@ function Submission() {
           async () => {
             await getDownloadURL(uploadAadharTask.snapshot.ref).then(
               async (url) => {
-                aadharUrl = url;
                 let document = {
                   email: email,
                   name: name,
@@ -151,13 +149,11 @@ function Submission() {
                   submission: 1,
                 };
                 await updateDoc(userRef, document);
-                urls.push(url);
-                console.log(url);
+                // localStorage.setItem("aadhar", url);
               }
             );
           }
         );
-        console.log("Checking here cmmcmcmcm");
         uploadSubmissionTask.on(
           "state_changed",
           (snapshot) => {
@@ -185,7 +181,7 @@ function Submission() {
                   school_state: school_state,
                   school_city: school_city,
                 };
-                console.log("Checking here 2");
+                // localStorage.setItem("submission", url);
                 await updateDoc(userRef, document);
                 alert("Form submitted successfully");
                 setLoading(false);
@@ -295,10 +291,7 @@ function Submission() {
                     className="custom-file-input"
                     type={"file"}
                     accept=".pdf,image/*"
-                    onChange={(e) => {
-                      setAadhar(e.target.files[0]);
-                      setAadharFileName(e.target.files[0].name);
-                    }}
+                    onChange={(e) => {setAadhar(e.target.files[0])}}
                   />
                   <p className="file_name">Choose File</p>
                 </div>

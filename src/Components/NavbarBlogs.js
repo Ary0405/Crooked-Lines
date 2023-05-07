@@ -11,7 +11,7 @@ function NavbarBlogs() {
             <div className='navbar_blogs_elements'>
                 <p onClick={() => {dispatch(actionCreators.setBlogs('blogs'))}}>Blogs</p>
                 <p onClick={() => {dispatch(actionCreators.setBlogs('freewheeler'))}}>FreeWheeler</p>
-                {/* <p>Spotlight</p> */}
+                <p onClick={() => {dispatch(actionCreators.setBlogs('spotlight'))}}>Spotlight</p>
             </div>
         </div>
     )
