@@ -105,3 +105,22 @@
         max-width: 1400px;
     }
 }
+
+@media (min-width:240px) and (max-width: 768px){
+    .spotlight_main_container{
+        flex-direction: column;
+    }
+    .writer_main_container{
+        padding: 50px 50px;
+    }
+    .writer_intro{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .writer_container_header{
+        margin-right: 0px;
+    }
+}
