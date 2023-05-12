@@ -149,7 +149,6 @@ function Submission() {
                   submission: 1,
                 };
                 await updateDoc(userRef, document);
-                // localStorage.setItem("aadhar", url);
               }
             );
           }
