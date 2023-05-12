@@ -69,9 +69,10 @@ function BlogsContainer() {
     ];
     return (
         <div className='blogs_card_container'>
-            {blogs.map(({ title, description , id , writer }) => (
+            {/* {blogs.map(({ title, description , id , writer }) => (
                 <BlogsCard title={title} description={description} id = {id} writer={writer}/>
-            ))}
+            ))} */}
+            <p style={{"textAlign" : "center" , "fontSize" : "30px"}}>Coming Soon!!</p>
         </div>
     )
 }
