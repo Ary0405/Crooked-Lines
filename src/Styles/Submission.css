@@ -1,7 +1,6 @@
 /* .submission_image {
     background-image: url('../Assets/sub_bg.png');
 } */
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .submission_main_container {
     display: flex;

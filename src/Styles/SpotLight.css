@@ -1,0 +1,128 @@
+.spotlight_image{
+    width:200px;
+    height:auto;
+    border-radius: 0.5rem;
+}
+
+.spotlight_container{
+    height: 450px;
+    width: 300px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin:1rem;
+    padding:1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.spotlight_position {
+    text-align: center;
+}
+/* .spotlight_container > p{
+    max-width: 500px;
+} */
+
+.spotlight_main_container{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    margin:1rem;
+    padding:1rem;
+    border-radius: 0.5rem;
+}
+
+
+.writer_image{
+    width:200px;
+    height:auto;
+    border-radius: 0.5rem;
+}
+
+.writer_main_container{
+    display:flex;
+    flex-direction:column;
+    align-items:left;
+    justify-content:left;
+    background-color: rgba(239, 238, 255, 1) ;
+    padding: 50px 150px;
+    line-height: 1.5em;
+}
+
+.writer_intro{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    margin:1rem;
+    padding:1rem;
+    /* border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); */
+}
+
+.writer_container_header{
+    margin-right: 70px;
+
+}
+
+.writer_main_container p{
+    max-width: 1300px;
+}
+
+.writer_name{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.writer_container{
+    text-align: justify;
+}
+
+.writer_question{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.writer_answer{
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+@media (min-width:1700px){
+    .writer_intro_text > p{
+        max-width: 950px ;
+    }
+    .writer_intro{
+        margin-right: 100px;
+    }
+    .writer_main_container{
+        padding: 50px 200px 50px 250px;
+    }
+    .writer_main_container p{
+        max-width: 1400px;
+    }
+}
+
+@media (min-width:240px) and (max-width: 768px){
+    .spotlight_main_container{
+        flex-direction: column;
+    }
+    .writer_main_container{
+        padding: 50px 50px;
+    }
+    .writer_intro{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .writer_container_header{
+        margin-right: 0px;
+    }
+}

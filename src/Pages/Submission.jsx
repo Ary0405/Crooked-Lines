@@ -19,8 +19,8 @@ const db = getFirestore();
 
 function Submission() {
   const id = uniqid("crookedlines");
-  const [registration] = useState(id);
   const userRef = collection(db, "users");
+  const [registration] = useState(id);
   const [aadharFileName, setAadharFileName] = useState("");
   const [submissionFileName, setSubmissionFileName] = useState("");
   const [name, setName] = useState("");
@@ -180,6 +180,7 @@ function Submission() {
                   school_state: school_state,
                   school_city: school_city,
                 };
+                // localStorage.setItem("submission", url);
                 await updateDoc(userRef, document);
                 alert("Form submitted successfully");
                 setLoading(false);

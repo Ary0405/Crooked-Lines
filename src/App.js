@@ -8,8 +8,15 @@ import ProtectedRoute from './Components/ProtectedRoute';
 import SubmissionComplete from './Pages/Submission_Complete';
 import SignIn from './Pages/Sign_in';
 import About from './Pages/About';
+import Blogs from './Pages/Blogs';
+import SpotLightContent from './Pages/SpotLightContent';
+import BlogContent from './Pages/BlogContent';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    localStorage.setItem('view','blogs')
+  },[])
   return (
     <div className="App">
       <AuthContextProvider>
@@ -19,9 +26,12 @@ function App() {
               <Route exact path='/' element={<Main />} />
               <Route exact path='/otp' element={<Otp />} />
               <Route exact path='/signin' element={<SignIn />} />
-              <Route exact path='/about' element={<About/>} />
+              <Route exact path='/about' element={<About />} />
               <Route exact path='/submission' element={<ProtectedRoute><Submission /></ProtectedRoute>} />
               <Route exact path='/submission-complete' element={<ProtectedRoute><SubmissionComplete /></ProtectedRoute>} />
+              <Route exact path='/blogs' element={<Blogs />} />
+              <Route exact path='/content/:id' element={<BlogContent />} />
+              <Route exact path='/spotlight/:id' element={<SpotLightContent/>} />
             </Routes>
           </BrowserRouter>
         </AnimatePresence>
