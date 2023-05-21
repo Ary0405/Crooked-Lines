@@ -57,7 +57,7 @@ function SpotLight() {
                                 <div className='spotlight_container' onClick={() => { navigate(`/spotlight/${item.id}`) }}>
                                     <img src={item.image} alt='spotlight' className='spotlight_image' />
                                     <p className='spotlight_heading'>{item.name}</p>
-                                    <p className='spotlight_position'>{item.position}</p>
+                                    {/* <p className='spotlight_position'>{item.position}</p> */}
                                 </div>
                             </>
                         );
