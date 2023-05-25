@@ -1,7 +1,7 @@
 .navbar_blogs_main_container {
     display: flex;
     padding-top: 40px;
-    padding-left: 40px;
+    padding-left: 100px;
     align-items: center;
 }
 .navbar_blogs_elements {
@@ -39,6 +39,5 @@
     .navbar_blogs_elements > p {
         font-size: 15px;
         font-weight: 600;
-        /* margin: 20px 10px 0px 10px; */
     }
 }
